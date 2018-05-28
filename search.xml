@@ -21,6 +21,15 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Vue-cli笔记]]></title>
+    <url>%2F2018%2F05%2F01%2FvueCli%2F</url>
+    <content type="text"><![CDATA[Vue-cli安装vue-cli是构建单页面应用的脚手架 npm install vue-cli -g 检查vue-cli版本vue - V 初始化项目 vue init &lt;template-name&gt; &lt;project-name&gt; 初始化项目完毕后，就可以写自己的项目了。 注意： npm run dev报错 12Module build failed: Error: &quot;extract-text-webpack-plugin&quot; loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example 解决方法:参考 在webpack.base.conf.js中添加以下代码 12345678910111213141516const ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;);.... &#123; test: /\.scss$/, use: ExtractTextPlugin.extract(&#123; use: [ &apos;css-loader&apos;, &apos;sass-loader&apos;] &#125;) &#125; ... plugins: [ new ExtractTextPlugin(&#123; filename: &apos;./[name].css&apos; &#125;) ] Vue-cli安装的webpack项目目录介绍几个重要的文件: dev-server.js 服务器文件 webpack.base.config.js webpack的基础配置文件 .babelrc 把ES6转换为ES5代码 .editorconfig 定义项目的编码规范，编译器的行为会与该文件中定义的一致，并且高于编译器自身的设置要高 index.html 项目的入口页面 main.js 程序入口文件，用于加载js与css等文件 App.vue 页面组件 疑问： 项目执行流程，页面入口index.html引入main.js ，main.js引入组件App.vue，index.js中路由怎么执行的，程序执行流程是什么，还需要vue-router内容来支撑。]]></content>
+      <tags>
+        <tag>Vue</tag>
+        <tag>JSpang系列教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[开博客的原因]]></title>
     <url>%2F2017%2F11%2F20%2FmyBlog%2F</url>
     <content type="text"><![CDATA[简介通过各种查找资料，走过各种弯路，解决了一个接一个问题，博客初步完成了，博客的主要用途是记录自己前端学习历程，心情不好的时候也会写一些对生活的心得、感想，记录下自己那些难忘的岁月。 正文1、博客创建所用到的资源 GitHub 从零开始创建一个博客是很累人的，好在github上的开源博客项目，只需修改自己相关内容，可以更好的专注于博客内容的书写。 百度统计 博客浏览量统计，通过分析可以得到浏览博客网友的区域分布，浏览高峰时间段。 来必力 评论系统，很方便，几行代码copy到博客中，就可以显示评论区域框架结构，更棒的是可以在其网站上分析各种评论数据。 typora Markdown编辑器，所写即所得，高效、快捷。 2、鸣谢 [酒石酸菌] 基于 GitHub Pages 和 Jekyll 搭建个人博客的简单心得。 leopardpan 点击链接就可以访问原作者的Github的开源博客项目。]]></content>

@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Vue,JSpang系列教程," />
 
 
 
@@ -86,17 +86,18 @@
 
 
 
-<meta name="description" content="经不住瞎折腾">
-<meta name="keywords" content="Web">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Rainbow&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Vue-cli安装vue-cli是构建单页面应用的脚手架  npm install vue-cli -g  检查vue-cli版本vue - V 初始化项目  vue init &amp;lt;template-name&amp;gt; &amp;lt;project-name&amp;gt;  初始化项目完毕后，就可以写自己的项目了。 注意：  npm run dev报错 12Module build failed: Erro">
+<meta name="keywords" content="Vue,JSpang系列教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue-cli笔记">
+<meta property="og:url" content="http://yoursite.com/2018/05/01/vueCli/index.html">
 <meta property="og:site_name" content="Rainbow&#39;s Notes">
-<meta property="og:description" content="经不住瞎折腾">
+<meta property="og:description" content="Vue-cli安装vue-cli是构建单页面应用的脚手架  npm install vue-cli -g  检查vue-cli版本vue - V 初始化项目  vue init &amp;lt;template-name&amp;gt; &amp;lt;project-name&amp;gt;  初始化项目完毕后，就可以写自己的项目了。 注意：  npm run dev报错 12Module build failed: Erro">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-28T10:38:45.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rainbow&#39;s Notes">
-<meta name="twitter:description" content="经不住瞎折腾">
+<meta name="twitter:title" content="Vue-cli笔记">
+<meta name="twitter:description" content="Vue-cli安装vue-cli是构建单页面应用的脚手架  npm install vue-cli -g  检查vue-cli版本vue - V 初始化项目  vue init &amp;lt;template-name&amp;gt; &amp;lt;project-name&amp;gt;  初始化项目完毕后，就可以写自己的项目了。 注意：  npm run dev报错 12Module build failed: Erro">
 
 
 
@@ -126,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/01/vueCli/"/>
 
 
 
 
 
-  <title>Rainbow's Notes</title>
+  <title>Vue-cli笔记 | Rainbow's Notes</title>
   
 
 
@@ -151,8 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -289,346 +289,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/hexo及next常用指令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rainbow">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rainbow's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/28/hexo及next常用指令/" itemprop="url">hexo+next常用指令</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T17:49:38+08:00">
-                2018-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  482
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          利用Hexo+NexT博客搭建完毕后，这里有一些常用的命令
-1.写一篇博客
-$hexo new articleTitle 采用默认的post的样式创建一个articleTitle文章
-$hexo new [articleStyle] articleTitle 采用articleStyle 样式创建一
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/28/hexo及next常用指令/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/git常用操作/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rainbow">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rainbow's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/25/git常用操作/" itemprop="url">Git基础命令清单</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T00:00:00+08:00">
-                2018-05-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Github/" itemprop="url" rel="index">
-                    <span itemprop="name">Github</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1,546
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          Git基础命令清单，很基础的，命令太多记不住的话及时查看。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/25/git常用操作/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -658,9 +321,7 @@ $hexo new [articleStyle] articleTitle 采用articleStyle 样式创建一
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/01/vueCli/" itemprop="url">Vue-cli笔记</a></h1>
+          <h1 class="post-title" itemprop="name headline">Vue-cli笔记</h1>
         
 
         <div class="post-meta">
@@ -741,24 +402,33 @@ $hexo new [articleStyle] articleTitle 采用articleStyle 样式创建一
       
 
       
-        
-          
-          Vue-cli安装vue-cli是构建单页面应用的脚手架 
-npm install vue-cli -g  检查vue-cli版本vue - V
-初始化项目
+        <h3 id="Vue-cli安装"><a href="#Vue-cli安装" class="headerlink" title="Vue-cli安装"></a>Vue-cli安装</h3><p>vue-cli是构建单页面应用的脚手架 </p>
+<p><code>npm install vue-cli -g</code>  检查vue-cli版本<code>vue - V</code></p>
+<p><strong>初始化项目</strong></p>
+<blockquote>
+<p><code>vue init &lt;template-name&gt; &lt;project-name&gt;</code></p>
+</blockquote>
+<p>初始化项目完毕后，就可以写自己的项目了。</p>
+<p><strong>注意：</strong> </p>
+<p><code>npm run dev</code>报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Module build failed: Error: &quot;extract-text-webpack-plugin&quot; loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage exa</span><br><span class="line">mple</span><br></pre></td></tr></table></figure>
+<p>解决方法:<a href="https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/700" target="_blank" rel="noopener">参考</a> 在<code>webpack.base.conf.js</code>中添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;);</span><br><span class="line">....</span><br><span class="line"> &#123;</span><br><span class="line">   test: /\.scss$/,</span><br><span class="line">   use: ExtractTextPlugin.extract(&#123;</span><br><span class="line">   use: [</span><br><span class="line">     &apos;css-loader&apos;,</span><br><span class="line">     &apos;sass-loader&apos;]</span><br><span class="line">   &#125;)</span><br><span class="line"> &#125;</span><br><span class="line"> ...</span><br><span class="line"> plugins: [</span><br><span class="line">   new ExtractTextPlugin(&#123;</span><br><span class="line">   	filename: &apos;./[name].css&apos;</span><br><span class="line">   &#125;)</span><br><span class="line"> ]</span><br></pre></td></tr></table></figure>
+<h3 id="Vue-cli安装的webpack项目目录介绍"><a href="#Vue-cli安装的webpack项目目录介绍" class="headerlink" title="Vue-cli安装的webpack项目目录介绍"></a>Vue-cli安装的webpack项目目录介绍</h3><p>几个重要的文件:</p>
+<blockquote>
+<p><code>dev-server.js</code> 服务器文件</p>
+<p><code>webpack.base.config.js</code> webpack的基础配置文件</p>
+<p><code>.babelrc</code> 把ES6转换为ES5代码</p>
+<p><code>.editorconfig</code> 定义项目的编码规范，编译器的行为会与该文件中定义的一致，并且高于编译器自身的设置要高</p>
+<p><code>index.html</code> 项目的入口页面</p>
+<p><code>main.js</code> 程序入口文件，用于加载js与css等文件</p>
+<p><code>App.vue</code> 页面组件 </p>
+</blockquote>
+<p><strong>疑问：</strong></p>
+<ol>
+<li>项目执行流程，页面入口<code>index.html</code>引入<code>main.js</code> ，<code>main.js</code>引入组件<code>App.vue</code>，<code>index.js</code>中路由怎么执行的，程序执行流程是什么，还需要<code>vue-router</code>内容来支撑。</li>
+</ol>
 
-vue init &lt;template-name&gt; &lt;project-name&gt;
-
-初始化项目完毕后，就可以写自己的项
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/01/vueCli/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
     
@@ -768,201 +438,71 @@ vue init &lt;template-name&gt; &lt;project-name&gt;
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果我的文章帮助了您，欢迎打赏！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Rainbow 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/20/myBlog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Rainbow">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Rainbow's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/20/myBlog/" itemprop="url">开博客的原因</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-20T00:00:00+08:00">
-                2017-11-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
           
-
+            <a href="/tags/JSpang系列教程/" rel="tag"># JSpang系列教程</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  302
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          简介通过各种查找资料，走过各种弯路，解决了一个接一个问题，博客初步完成了，博客的主要用途是记录自己前端学习历程，心情不好的时候也会写一些对生活的心得、感想，记录下自己那些难忘的岁月。
-正文1、博客创建所用到的资源
-
-GitHub 从零开始创建一个博客是很累人的，好在github上的开源博客项目，只需
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/20/myBlog/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/20/myBlog/" rel="next" title="开博客的原因">
+                <i class="fa fa-chevron-left"></i> 开博客的原因
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/25/git常用操作/" rel="prev" title="Git基础命令清单">
+                Git基础命令清单 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -972,10 +512,11 @@ GitHub 从零开始创建一个博客是很累人的，好在github上的开源�
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -983,6 +524,15 @@ GitHub 从零开始创建一个博客是很累人的，好在github上的开源�
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTk2My84NTI3"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1003,8 +553,17 @@ GitHub 从零开始创建一个博客是很累人的，好在github上的开源�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1126,6 +685,22 @@ GitHub 从零开始创建一个博客是很累人的，好在github上的开源�
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-cli安装"><span class="nav-number">1.</span> <span class="nav-text">Vue-cli安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-cli安装的webpack项目目录介绍"><span class="nav-number">2.</span> <span class="nav-text">Vue-cli安装的webpack项目目录介绍</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1277,6 +852,10 @@ GitHub 从零开始创建一个博客是很累人的，好在github上的开源�
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1305,6 +884,17 @@ GitHub 从零开始创建一个博客是很累人的，好在github上的开源�
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
