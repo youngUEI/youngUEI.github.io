@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[hexo+next常用指令]]></title>
+    <title><![CDATA[Hexo+NexT常用指令]]></title>
     <url>%2F2018%2F05%2F28%2Fhexo%E5%8F%8Anext%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[利用Hexo+NexT博客搭建完毕后，这里有一些常用的命令 1.写一篇博客 $hexo new articleTitle 采用默认的post的样式创建一个articleTitle文章 $hexo new [articleStyle] articleTitle 采用articleStyle 样式创建一篇文章 2.博客中的各项参数 layout 文章采用的布局样式 title 标题，可以设置默认标题，在博客配置文件中，通过改变new_post_name 来改变默认文件名称。可以采用:year-:month-:day-:title.md 作为默认默认样式，方便文章管理 date 建立文章的日期 comments 开启文章评论功能，默认开启的，当文章不希望评论时，设置该值为false tags 文章标签,一个文章可能涉及多方面内容，可以多个标签 categories 文章分类，每一个文章只属于某一个类（最好只属于某一个类） 例子： 123456789--- layout: post title:xxxx tags: -tag1 -tag2 -tag3 categories: categorie1--- 3.生成静态文件 $hexo generate 生成静态文件，这里是将文件根目录中的source文件夹内容转换成public静态文件夹 4.本地预览 $hexo server 创建本地服务器，博客开始运行。 注意： (1).在git bash中使用strl+c无法关闭服务器，是因为我这里的热键冲突，我的解决方案是采用Atom的命令行，这里可以正常关闭 (2).有时候修改了博客内容，刷新后仍然无效，这里是缓存的问题，使用$hexo clean命令，该命令会删除public文件夹，重新创建新的public文件夹 5.部署到线上 $hexo generate 生成静态文件，之前有提及 $hexo deploy 将网站部署到服务器，前提是你的git已经和线上服务器绑定，绑定很简单，百度。 这两条命令可以合并: $hexo g -d生成静态文件，并部署到线上]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
       <tags>
         <tag>-Github -Git -Hexo -NexT</tag>
       </tags>
@@ -24,6 +27,9 @@
     <title><![CDATA[Vue-cli笔记]]></title>
     <url>%2F2018%2F05%2F01%2FvueCli%2F</url>
     <content type="text"><![CDATA[Vue-cli安装vue-cli是构建单页面应用的脚手架 npm install vue-cli -g 检查vue-cli版本vue - V 初始化项目 vue init &lt;template-name&gt; &lt;project-name&gt; 初始化项目完毕后，就可以写自己的项目了。 注意： npm run dev报错 12Module build failed: Error: &quot;extract-text-webpack-plugin&quot; loader is used without the corresponding plugin, refer to https://github.com/webpack/extract-text-webpack-plugin for the usage example 解决方法:参考 在webpack.base.conf.js中添加以下代码 12345678910111213141516const ExtractTextPlugin = require(&apos;extract-text-webpack-plugin&apos;);.... &#123; test: /\.scss$/, use: ExtractTextPlugin.extract(&#123; use: [ &apos;css-loader&apos;, &apos;sass-loader&apos;] &#125;) &#125; ... plugins: [ new ExtractTextPlugin(&#123; filename: &apos;./[name].css&apos; &#125;) ] Vue-cli安装的webpack项目目录介绍几个重要的文件: dev-server.js 服务器文件 webpack.base.config.js webpack的基础配置文件 .babelrc 把ES6转换为ES5代码 .editorconfig 定义项目的编码规范，编译器的行为会与该文件中定义的一致，并且高于编译器自身的设置要高 index.html 项目的入口页面 main.js 程序入口文件，用于加载js与css等文件 App.vue 页面组件 疑问： 项目执行流程，页面入口index.html引入main.js ，main.js引入组件App.vue，index.js中路由怎么执行的，程序执行流程是什么，还需要vue-router内容来支撑。]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
       <tags>
         <tag>Vue</tag>
         <tag>JSpang系列教程</tag>
