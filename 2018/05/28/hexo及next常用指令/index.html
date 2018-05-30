@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Rainbow&#39;s Notes">
 <meta property="og:description" content="利用Hexo+NexT博客搭建完毕后，这里有一些常用的命令 1.写一篇博客 $hexo new articleTitle 采用默认的post的样式创建一个articleTitle文章 $hexo new [articleStyle] articleTitle 采用articleStyle 样式创建一篇文章  2.博客中的各项参数 layout 文章采用的布局样式 title  标题，可以设置默认标">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-29T02:03:55.373Z">
+<meta property="og:updated_time" content="2018-05-30T08:03:09.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+NexT常用指令">
 <meta name="twitter:description" content="利用Hexo+NexT博客搭建完毕后，这里有一些常用的命令 1.写一篇博客 $hexo new articleTitle 采用默认的post的样式创建一个articleTitle文章 $hexo new [articleStyle] articleTitle 采用articleStyle 样式创建一篇文章  2.博客中的各项参数 layout 文章采用的布局样式 title  标题，可以设置默认标">
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  482
+                  507
                 </span>
               
 
@@ -436,9 +436,10 @@
 <p><code>comments</code> 开启文章评论功能，默认开启的，当文章不希望评论时，设置该值为false</p>
 <p><code>tags</code> 文章标签,一个文章可能涉及多方面内容，可以多个标签</p>
 <p><code>categories</code> 文章分类，每一个文章只属于某一个类（最好只属于某一个类）</p>
+<p><code>description</code> 用于在首页显示文章的概述</p>
 </blockquote>
-<p>例子： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">	layout: post</span><br><span class="line">	title:xxxx</span><br><span class="line">	tags:</span><br><span class="line">		-tag1</span><br><span class="line">		-tag2</span><br><span class="line">		-tag3</span><br><span class="line">	categories: categorie1</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>例子： （冒号后存在一个空格）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">	layout: post</span><br><span class="line">	title: xxxx</span><br><span class="line">	description: xxxx</span><br><span class="line">	tags:</span><br><span class="line">		- tag1</span><br><span class="line">		- tag2</span><br><span class="line">		- tag3</span><br><span class="line">	categories: categorie1</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <h3 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h3><blockquote>
 <p><code>$hexo generate</code> 生成静态文件，这里是将文件根目录中的<code>source</code>文件夹内容转换成<code>public</code>静态文件夹</p>
 </blockquote>
@@ -525,6 +526,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/05/30/vue基础1/" rel="prev" title="vue基础知识1">
+                vue基础知识1 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -609,7 +614,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
