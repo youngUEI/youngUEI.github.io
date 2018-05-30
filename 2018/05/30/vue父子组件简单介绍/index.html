@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Rainbow&#39;s Notes">
 <meta property="og:description" content="Vue中父组件子组件究竟是什么，详细写出了自己对父子组件的认识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-30T09:52:57.086Z">
+<meta property="og:updated_time" content="2018-05-30T14:18:02.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue父子组件简单介绍">
 <meta name="twitter:description" content="Vue中父组件子组件究竟是什么，详细写出了自己对父子组件的认识">
@@ -387,7 +387,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  364
+                  423
                 </span>
               
 
@@ -428,8 +428,13 @@
       
 
       
-        <h2 id="1-理解父子组件"><a href="#1-理解父子组件" class="headerlink" title="1. 理解父子组件"></a>1. 理解父子组件</h2><blockquote>
+        <h2 id="1-理解父子组件"><a href="#1-理解父子组件" class="headerlink" title="1. 理解父子组件"></a>1. 理解父子组件</h2><p>可以简单的理解为：</p>
+<blockquote>
 <p>在a组件的模板<code>template</code>中使用的b组件，这个b组件就是a的子组件，a为b的父组件</p>
+</blockquote>
+<p>但是经过个人分析后认为：</p>
+<blockquote>
+<p>在a组件的模板<code>template</code>中使用的b组件，这个b组件<strong>的<code>template</code>中的内容</strong>才是a的子组件，详细分析见：<a href="">父子组件通讯</a></p>
 </blockquote>
 <h3 id="父子组件实例"><a href="#父子组件实例" class="headerlink" title="父子组件实例"></a>父子组件实例</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent-component</span>&gt;</span><span class="tag">&lt;/<span class="name">parent-component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">text</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  var child = Vue.extend(&#123;</span></span><br><span class="line"><span class="xml">    template:`<span class="tag">&lt;<span class="name">div</span>&gt;</span>child<span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined">  var parent = Vue.extend(&#123;</span></span><br><span class="line"><span class="xml">    template:`<span class="tag">&lt;<span class="name">div</span>&gt;</span>在父组件内部使用子组件必须先注册:<span class="tag">&lt;<span class="name">child-component</span>&gt;</span><span class="tag">&lt;/<span class="name">child-component</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>`,</span></span><br><span class="line"><span class="undefined">    components:&#123;</span></span><br><span class="line"><span class="undefined">      'child-component': child,  //注册子组件，并将其标签名定义为child-component</span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="undefined">  &#125;);</span></span><br><span class="line"><span class="undefined">  new Vue(&#123;</span></span><br><span class="line"><span class="undefined">    el: "#app",</span></span><br><span class="line"><span class="undefined">    components:&#123;</span></span><br><span class="line"><span class="undefined">      'parent-component': parent, </span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><code>&lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-compoent&gt;&lt;/child-component&gt;&lt;/div&gt;</code> 这里父组件中使用子组件<code>child-component</code></p>
@@ -491,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/28/hexo及next常用指令/" rel="next" title="Hexo+NexT常用指令">
-                <i class="fa fa-chevron-left"></i> Hexo+NexT常用指令
+              <a href="/2018/05/30/vue父子组件通信/" rel="next" title="Vue父子组件通信">
+                <i class="fa fa-chevron-left"></i> Vue父子组件通信
               </a>
             
           </div>
@@ -585,7 +590,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

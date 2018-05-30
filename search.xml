@@ -3,7 +3,19 @@
   <entry>
     <title><![CDATA[Vue父子组件简单介绍]]></title>
     <url>%2F2018%2F05%2F30%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
-    <content type="text"><![CDATA[1. 理解父子组件 在a组件的模板template中使用的b组件，这个b组件就是a的子组件，a为b的父组件 父子组件实例1234567891011121314151617181920212223...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;/div&gt;&lt;/body&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;child&lt;/div&gt;` &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-component&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; &lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-compoent&gt;&lt;/child-component&gt;&lt;/div&gt; 这里父组件中使用子组件child-component 父组件给子组件传值123456789101112131415161718192021222324252627282930...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;!--父组件--&gt; &lt;/div&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;子组件接受的信息为：&#123;&#123;parentName&#125;&#125;,&#123;&#123;parentSex&#125;&#125;&lt;/div&gt;`, props:['parentName','parentSex'], &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;父组件信息已传递给子组件：&lt;child-component :parent-name="name" :parent-sex="sex"&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, data()&#123; return &#123; name: 'younguei', sex: 'male', &#125; &#125; &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; 这个实例有一个父组件、子组件、“孙组件”，实际是实例vm上挂载一个子组件parent-component,该子组件又挂载一个子组件child-component]]></content>
+    <content type="text"><![CDATA[1. 理解父子组件可以简单的理解为： 在a组件的模板template中使用的b组件，这个b组件就是a的子组件，a为b的父组件 但是经过个人分析后认为： 在a组件的模板template中使用的b组件，这个b组件的template中的内容才是a的子组件，详细分析见：父子组件通讯 父子组件实例1234567891011121314151617181920212223...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;/div&gt;&lt;/body&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;child&lt;/div&gt;` &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-component&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; &lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-compoent&gt;&lt;/child-component&gt;&lt;/div&gt; 这里父组件中使用子组件child-component 父组件给子组件传值123456789101112131415161718192021222324252627282930...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;!--父组件--&gt; &lt;/div&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;子组件接受的信息为：&#123;&#123;parentName&#125;&#125;,&#123;&#123;parentSex&#125;&#125;&lt;/div&gt;`, props:['parentName','parentSex'], &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;父组件信息已传递给子组件：&lt;child-component :parent-name="name" :parent-sex="sex"&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, data()&#123; return &#123; name: 'younguei', sex: 'male', &#125; &#125; &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; 这个实例有一个父组件、子组件、“孙组件”，实际是实例vm上挂载一个子组件parent-component,该子组件又挂载一个子组件child-component]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Vue基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Vue父子组件通信]]></title>
+    <url>%2F2018%2F05%2F30%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%2F</url>
+    <content type="text"><![CDATA[1. 父子组件通讯父组件给子组件传递信息实例 子组件给父组件传递信息123456789101112131415161718192021222324252627282930313233343536...&lt;body&gt; &lt;div id="app"&gt; &#123;&#123;count&#125;&#125; &lt;count-btn v-on:increment="addOne"&gt;&lt;/count-btn&gt; &lt;!--子组件--&gt; &lt;count-btn v-on:increment="addOne"&gt;&lt;/count-btn&gt; &lt;!--子组件--&gt; &lt;/div&gt; &lt;script text="text/javascript"&gt; Vue.component('count-btn',&#123; template:`&lt;button v-on:click="add"&gt;&#123;&#123;btnCount&#125;&#125;&lt;/button&gt;`, methods:&#123; add()&#123; this.btnCount++; this.$emit('increment'); &#125; &#125;, data()&#123; return&#123; btnCount:0, &#125; &#125;, &#125;) new Vue(&#123; el: "#app", data:&#123; count : 0, &#125;, methods:&#123; addOne()&#123; this.count++; &#125; &#125;, &#125;) &lt;/script&gt;&lt;/body&gt; 关于父子组件:12345&lt;div id="app"&gt; &#123;&#123;count&#125;&#125; &lt;count-btn v-on:increment="addOne"&gt;&lt;/count-btn&gt; &lt;!--子组件--&gt; &lt;count-btn v-on:increment="addOne"&gt;&lt;/count-btn&gt; &lt;!--子组件--&gt;&lt;/div&gt; 这里的&lt;count-btn v-on:increment=&quot;addOne&quot;&gt;&lt;/count-btn&gt; 是父组件的一部分，count-btn组件模板template为子组件，子组件为&lt;button v-on:click=&quot;add&quot;&gt;&lt;/button&gt; 分析代码 子组件给父组件传递信息经历的步骤： 子组件监听click事件 &lt;button v-on:click=&quot;add&quot;&gt;&lt;/button&gt; 当触发click事件后，会执行add函数 add 函数中this.$emit(&#39;increment&#39;); 会触发increment事件 父组件&lt;count-btn v-on:increment=&quot;addOne&quot;&gt;&lt;/count-btn&gt; 时刻在监听increment时间，子组件触发该事件后，会执行addOne函数，从而实现子组件给父组件通讯，使得父组件在子组件点击后自增1.]]></content>
       <categories>
         <category>Vue</category>
       </categories>
@@ -20,8 +32,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Git</tag>
         <tag>Github</tag>
+        <tag>Git</tag>
         <tag>Hexo</tag>
         <tag>NexT</tag>
       </tags>
@@ -34,8 +46,8 @@
         <category>Github</category>
       </categories>
       <tags>
-        <tag>GitHub</tag>
         <tag>Git</tag>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
