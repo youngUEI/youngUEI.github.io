@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[vue基础知识1]]></title>
-    <url>%2F2018%2F05%2F30%2Fvue%E5%9F%BA%E7%A1%801%2F</url>
+    <title><![CDATA[Vue父子组件简单介绍]]></title>
+    <url>%2F2018%2F05%2F30%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
     <content type="text"><![CDATA[1. 理解父子组件 在a组件的模板template中使用的b组件，这个b组件就是a的子组件，a为b的父组件 父子组件实例1234567891011121314151617181920212223...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;/div&gt;&lt;/body&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;child&lt;/div&gt;` &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-component&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; &lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-compoent&gt;&lt;/child-component&gt;&lt;/div&gt; 这里父组件中使用子组件child-component 父组件给子组件传值123456789101112131415161718192021222324252627282930...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;!--父组件--&gt; &lt;/div&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;子组件接受的信息为：&#123;&#123;parentName&#125;&#125;,&#123;&#123;parentSex&#125;&#125;&lt;/div&gt;`, props:['parentName','parentSex'], &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;父组件信息已传递给子组件：&lt;child-component :parent-name="name" :parent-sex="sex"&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, data()&#123; return &#123; name: 'younguei', sex: 'male', &#125; &#125; &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; 这个实例有一个父组件、子组件、“孙组件”，实际是实例vm上挂载一个子组件parent-component,该子组件又挂载一个子组件child-component]]></content>
       <categories>
         <category>Vue</category>
       </categories>
       <tags>
         <tag>Vue</tag>
+        <tag>Vue基础知识</tag>
       </tags>
   </entry>
   <entry>
