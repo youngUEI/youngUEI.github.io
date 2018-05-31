@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Vue中绑定class的几种方法]]></title>
+    <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E7%BB%91%E5%AE%9Aclass%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[vue中元素绑定class1.使用对象绑定1234567891011121314151617181920212223242526272829303132...&lt;style type="text/css" media="screen"&gt; .base-style&#123; height:100px; width:100px; border: 1px solid #ccc; &#125; .class1&#123; background-color: orange; &#125; .class2&#123; border-radius: 50%; &#125;&lt;/style&gt;...&lt;div id="app"&gt; &lt;div class="base-style" :class="&#123;class1:classValue1,class2:classValue2&#125;"&gt;&lt;/div&gt; &lt;div class="base-style" :class="classObj"&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classValue1:true, classValue2:true, classObj:&#123; class1: true, class2: false, &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 12&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;div class=&quot;base-style class1 &quot;&gt;&lt;/div&gt; 2.使用数组绑定1234567891011121314...&lt;div id="app"&gt; &lt;div class="base-style" :class="[classStyle1,classStyle2]"&gt;&lt;/div&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125; &#125;)&lt;/script&gt; 最终渲染为：&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt; 3.将class绑定到组件上12345678910111213141516171819...&lt;div id="app"&gt; &lt;my-components class="base-style"&gt;&lt;/my-components&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125;, components:&#123; 'my-components':&#123; template: '&lt;div class="class1 class2"&gt;&lt;/div&gt;' &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 123&lt;div id=&quot;app&quot;&gt; &lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;/div&gt; 组件上的class将会传递到组件template内 &lt;my-component class=&quot;base-style&quot;&gt;&lt;/my-component&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Vue基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Vue中事件监听与触发]]></title>
+    <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%2F</url>
+    <content type="text"><![CDATA[v-on事件监听v-on监听某个事件，当事件触发后会执行相应的操作 以下为一个事件监听实例，具体效果为：页面上默认有三条数据，当用户在输入框输入并回车后，将数据添加到列表，点击列表项的x可以实现删除这一项。 12345678910111213141516171819202122232425&lt;div id="app"&gt; &lt;input v-model="newTodoText" placeholder="Add a todo" v-on:keyup.enter="todoList.unshift(newTodoText);newTodoText=''"/&gt; &lt;ol&gt; &lt;my-component v-for="(todo,index) in todoList" v-bind:key="index" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/my-component&gt; &lt;/ol&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; newTodoText:'', todoList :[ 'Learn Git', 'Learn Webpack', 'Learn Vue-cli' ] &#125;, components:&#123; 'my-component':&#123; template: `&lt;li&gt;&#123;&#123;thing&#125;&#125; &lt;button v-on:click="$emit('removething')"&gt;x&lt;/button&gt;&lt;/li&gt;`, props:['thing'], &#125; &#125; &#125;)&lt;/script&gt; 代码分析 组件my-component被点击后触发removething事件 在父组件中监听removething事件，等其触发后执行操作数组todoList的代码 其中： 当组件被循环的时候，需要添加key属性 1&lt;my-component v-for="(todo,index) in todoList" v-bind:key="index" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/my-component&gt; 当然这个组件可以重写为： 1&lt;li is="my-component" v-for="(todo,index) in todoList" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/li&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Vue基础知识</tag>
+        <tag>Vue事件监听</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Vue父子组件简单介绍]]></title>
     <url>%2F2018%2F05%2F30%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
     <content type="text"><![CDATA[1. 理解父子组件可以简单的理解为： 在a组件的模板template中使用的b组件，这个b组件就是a的子组件，a为b的父组件 但是经过个人分析后认为： 在a组件的模板template中使用的b组件，这个b组件的template中的内容才是a的子组件，详细分析见：父子组件通讯 父子组件实例1234567891011121314151617181920212223...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;/div&gt;&lt;/body&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;child&lt;/div&gt;` &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-component&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; &lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-compoent&gt;&lt;/child-component&gt;&lt;/div&gt; 这里父组件中使用子组件child-component 父组件给子组件传值123456789101112131415161718192021222324252627282930...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;!--父组件--&gt; &lt;/div&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;子组件接受的信息为：&#123;&#123;parentName&#125;&#125;,&#123;&#123;parentSex&#125;&#125;&lt;/div&gt;`, props:['parentName','parentSex'], &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;父组件信息已传递给子组件：&lt;child-component :parent-name="name" :parent-sex="sex"&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, data()&#123; return &#123; name: 'younguei', sex: 'male', &#125; &#125; &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; 这个实例有一个父组件、子组件、“孙组件”，实际是实例vm上挂载一个子组件parent-component,该子组件又挂载一个子组件child-component]]></content>
