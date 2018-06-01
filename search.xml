@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Vue中组件]]></title>
-    <url>%2F2018%2F06%2F01%2Fvue%E5%9F%BA%E7%A1%80%2F</url>
+    <title><![CDATA[Vue注册组件步骤]]></title>
+    <url>%2F2018%2F06%2F01%2Fvue%E7%BB%84%E4%BB%B6%E6%B3%A8%E5%86%8C%E6%AD%A5%E9%AA%A4%2F</url>
     <content type="text"><![CDATA[组件是可复用的Vue实例，组件与实例类似也是接受相同的选项，但是仅有根实例才会有el这样的选项，组件中data选项必须是函数的形式与根实例不同。 1.注册组件基础写法注册全局组件 Vue.extend(options) 创建了一个子类，参数为组件选项组成的对象 Vue.component(‘组件名’，组件的构造器) 实例化组件 （组件需要挂载到某个Vue的实例下，否则不会生效） 1234567891011121314151617181920&lt;div id=&quot;app&quot;&gt; &lt;my-component&gt;&lt;/my-component&gt; &lt;my-component&gt;&lt;/my-component&gt; &lt;my-component&gt;&lt;/my-component&gt;&lt;/div&gt;&lt;script type=&quot;text/javascript&quot;&gt; let component1 = Vue.extend(&#123; template: `&lt;div class=&quot;base-style class1&quot;&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;`, data()&#123; return&#123; msg : &apos;this is my-component &apos; &#125; &#125; &#125;); Vue.component(&quot;my-component&quot;, component1); new Vue(&#123; el: &quot;#app&quot;, &#125;)&lt;/script&gt; 注册局部组件 创建一个组件构造器 Vue.extend() 在vue实例下的components选项下将组件注册为局部组件并挂载到该Vue实例上 components:{‘组件名’：组件的构造器} 2.注册组件语法糖注册全局组件Vue.component(&#39;组件名&#39;，{/*......*/}) 传入一个选项对象，这会自动调用Vue.extend 12345678Vue.component(&apos;my-component&apos;,&#123; template: `&lt;div class=&quot;base-style class1&quot;&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;`, data()&#123; return&#123; msg : &apos;this is my-component &apos; &#125; &#125;&#125;) 组测局部组件需要在vue实例的components选项中注册 12345678910111213new Vue(&#123; el: &apos;#app&apos;, components:&#123; &apos;my-component&apos;:&#123; template: `&lt;div class=&quot;base-style class1&quot;&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;`, data()&#123; return&#123; msg : &apos;this is my-component &apos; &#125; &#125; &#125; &#125;&#125;)]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>Vue基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Vue中绑定class的几种方法]]></title>
-    <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E7%BB%91%E5%AE%9Aclass%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[vue中元素绑定class1.使用对象绑定1234567891011121314151617181920212223242526272829303132...&lt;style type="text/css" media="screen"&gt; .base-style&#123; height:100px; width:100px; border: 1px solid #ccc; &#125; .class1&#123; background-color: orange; &#125; .class2&#123; border-radius: 50%; &#125;&lt;/style&gt;...&lt;div id="app"&gt; &lt;div class="base-style" :class="&#123;class1:classValue1,class2:classValue2&#125;"&gt;&lt;/div&gt; &lt;div class="base-style" :class="classObj"&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classValue1:true, classValue2:true, classObj:&#123; class1: true, class2: false, &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 12&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;div class=&quot;base-style class1 &quot;&gt;&lt;/div&gt; 2.使用数组绑定1234567891011121314...&lt;div id="app"&gt; &lt;div class="base-style" :class="[classStyle1,classStyle2]"&gt;&lt;/div&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125; &#125;)&lt;/script&gt; 最终渲染为：&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt; 3.将class绑定到组件上12345678910111213141516171819...&lt;div id="app"&gt; &lt;my-components class="base-style"&gt;&lt;/my-components&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125;, components:&#123; 'my-components':&#123; template: '&lt;div class="class1 class2"&gt;&lt;/div&gt;' &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 123&lt;div id=&quot;app&quot;&gt; &lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;/div&gt; 组件上的class将会传递到组件template内 &lt;my-component class=&quot;base-style&quot;&gt;&lt;/my-component&gt;]]></content>
       <categories>
         <category>Vue</category>
       </categories>
@@ -38,9 +26,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Vue父子组件简单介绍]]></title>
-    <url>%2F2018%2F05%2F30%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
-    <content type="text"><![CDATA[1. 理解父子组件可以简单的理解为： 在a组件的模板template中使用的b组件，这个b组件就是a的子组件，a为b的父组件 但是经过个人分析后认为： 在a组件的模板template中使用的b组件，这个b组件的template中的内容才是a的子组件，详细分析见：父子组件通讯 父子组件实例1234567891011121314151617181920212223...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;/div&gt;&lt;/body&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;child&lt;/div&gt;` &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-component&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; &lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-compoent&gt;&lt;/child-component&gt;&lt;/div&gt; 这里父组件中使用子组件child-component 父组件给子组件传值123456789101112131415161718192021222324252627282930...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;!--父组件--&gt; &lt;/div&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;子组件接受的信息为：&#123;&#123;parentName&#125;&#125;,&#123;&#123;parentSex&#125;&#125;&lt;/div&gt;`, props:['parentName','parentSex'], &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;父组件信息已传递给子组件：&lt;child-component :parent-name="name" :parent-sex="sex"&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, data()&#123; return &#123; name: 'younguei', sex: 'male', &#125; &#125; &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; 这个实例有一个父组件、子组件、“孙组件”，实际是实例vm上挂载一个子组件parent-component,该子组件又挂载一个子组件child-component]]></content>
+    <title><![CDATA[Vue中绑定class的几种方法]]></title>
+    <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E7%BB%91%E5%AE%9Aclass%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[vue中元素绑定class1.使用对象绑定1234567891011121314151617181920212223242526272829303132...&lt;style type="text/css" media="screen"&gt; .base-style&#123; height:100px; width:100px; border: 1px solid #ccc; &#125; .class1&#123; background-color: orange; &#125; .class2&#123; border-radius: 50%; &#125;&lt;/style&gt;...&lt;div id="app"&gt; &lt;div class="base-style" :class="&#123;class1:classValue1,class2:classValue2&#125;"&gt;&lt;/div&gt; &lt;div class="base-style" :class="classObj"&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classValue1:true, classValue2:true, classObj:&#123; class1: true, class2: false, &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 12&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;div class=&quot;base-style class1 &quot;&gt;&lt;/div&gt; 2.使用数组绑定1234567891011121314...&lt;div id="app"&gt; &lt;div class="base-style" :class="[classStyle1,classStyle2]"&gt;&lt;/div&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125; &#125;)&lt;/script&gt; 最终渲染为：&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt; 3.将class绑定到组件上12345678910111213141516171819...&lt;div id="app"&gt; &lt;my-components class="base-style"&gt;&lt;/my-components&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125;, components:&#123; 'my-components':&#123; template: '&lt;div class="class1 class2"&gt;&lt;/div&gt;' &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 123&lt;div id=&quot;app&quot;&gt; &lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;/div&gt; 组件上的class将会传递到组件template内 &lt;my-component class=&quot;base-style&quot;&gt;&lt;/my-component&gt;]]></content>
       <categories>
         <category>Vue</category>
       </categories>
@@ -62,6 +50,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Vue父子组件简单介绍]]></title>
+    <url>%2F2018%2F05%2F30%2Fvue%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
+    <content type="text"><![CDATA[1. 理解父子组件可以简单的理解为： 在a组件的模板template中使用的b组件，这个b组件就是a的子组件，a为b的父组件 但是经过个人分析后认为： 在a组件的模板template中使用的b组件，这个b组件的template中的内容才是a的子组件，详细分析见：父子组件通讯 父子组件实例1234567891011121314151617181920212223...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;/div&gt;&lt;/body&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;child&lt;/div&gt;` &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-component&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; &lt;div&gt;在父组件内部使用子组件必须先注册:&lt;child-compoent&gt;&lt;/child-component&gt;&lt;/div&gt; 这里父组件中使用子组件child-component 父组件给子组件传值123456789101112131415161718192021222324252627282930...&lt;body&gt; &lt;div id="app"&gt; &lt;parent-component&gt;&lt;/parent-component&gt; &lt;!--父组件--&gt; &lt;/div&gt;&lt;script text="text/javascript"&gt; var child = Vue.extend(&#123; template:`&lt;div&gt;子组件接受的信息为：&#123;&#123;parentName&#125;&#125;,&#123;&#123;parentSex&#125;&#125;&lt;/div&gt;`, props:['parentName','parentSex'], &#125;); var parent = Vue.extend(&#123; template:`&lt;div&gt;父组件信息已传递给子组件：&lt;child-component :parent-name="name" :parent-sex="sex"&gt;&lt;/child-component&gt;&lt;/div&gt;`, components:&#123; 'child-component': child, //注册子组件，并将其标签名定义为child-component &#125;, data()&#123; return &#123; name: 'younguei', sex: 'male', &#125; &#125; &#125;); new Vue(&#123; el: "#app", components:&#123; 'parent-component': parent, &#125; &#125;)&lt;/script&gt; 这个实例有一个父组件、子组件、“孙组件”，实际是实例vm上挂载一个子组件parent-component,该子组件又挂载一个子组件child-component]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Vue基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo+NexT常用指令]]></title>
     <url>%2F2018%2F05%2F28%2Fhexo%E5%8F%8Anext%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%2F</url>
     <content type="text"><![CDATA[利用Hexo+NexT博客搭建完毕后，这里有一些常用的命令 1.写一篇博客 $hexo new articleTitle 采用默认的post的样式创建一个articleTitle文章 $hexo new [articleStyle] articleTitle 采用articleStyle 样式创建一篇文章 2.博客中的各项参数 layout 文章采用的布局样式 title 标题，可以设置默认标题，在博客配置文件中，通过改变new_post_name 来改变默认文件名称。可以采用:year-:month-:day-:title.md 作为默认默认样式，方便文章管理 date 建立文章的日期 comments 开启文章评论功能，默认开启的，当文章不希望评论时，设置该值为false tags 文章标签,一个文章可能涉及多方面内容，可以多个标签 categories 文章分类，每一个文章只属于某一个类（最好只属于某一个类） description 用于在首页显示文章的概述 例子： （冒号后存在一个空格） 12345678910--- layout: post title: xxxx description: xxxx tags: - tag1 - tag2 - tag3 categories: categorie1--- 3.生成静态文件 $hexo generate 生成静态文件，这里是将文件根目录中的source文件夹内容转换成public静态文件夹 4.本地预览 $hexo server 创建本地服务器，博客开始运行。 注意： (1).在git bash中使用strl+c无法关闭服务器，是因为我这里的热键冲突，我的解决方案是采用Atom的命令行，这里可以正常关闭 (2).有时候修改了博客内容，刷新后仍然无效，这里是缓存的问题，使用$hexo clean命令，该命令会删除public文件夹，重新创建新的public文件夹 5.部署到线上 $hexo generate 生成静态文件，之前有提及 $hexo deploy 将网站部署到服务器，前提是你的git已经和线上服务器绑定，绑定很简单，百度。 这两条命令可以合并: $hexo g -d生成静态文件，并部署到线上]]></content>
@@ -69,8 +69,8 @@
         <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Github</tag>
         <tag>Git</tag>
+        <tag>Github</tag>
         <tag>Hexo</tag>
         <tag>NexT</tag>
       </tags>
@@ -83,8 +83,8 @@
         <category>Github</category>
       </categories>
       <tags>
-        <tag>Git</tag>
         <tag>GitHub</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
