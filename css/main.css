@@ -1681,7 +1681,6 @@ pre .javascript .function {
   width: 280px;
   max-width: 100%;
   display: inline-block;
-  margin: 0.8em 2em 0 2em;
 }
 #wechat:hover p {
   animation: roll 0.1s infinite linear;
@@ -1953,7 +1952,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2b14bd;
+  background: #8bff6a;
 }
 .links-of-blogroll {
   font-size: 13px;
