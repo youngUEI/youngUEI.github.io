@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="GitHub,Git," />
+  <meta name="keywords" content="Vue,Vue基础知识," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="Git基础命令清单，很基础的，命令太多记不住的话及时查看。">
-<meta name="keywords" content="GitHub,Git">
+<meta name="description" content="Vue中过渡效果">
+<meta name="keywords" content="Vue,Vue基础知识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git基础命令清单">
-<meta property="og:url" content="http://yoursite.com/2018/05/25/git常用操作/index.html">
+<meta property="og:title" content="Vue过渡效果">
+<meta property="og:url" content="http://yoursite.com/2018/06/02/vue过渡及动画/index.html">
 <meta property="og:site_name" content="Rainbow&#39;s Notes">
-<meta property="og:description" content="Git基础命令清单，很基础的，命令太多记不住的话及时查看。">
+<meta property="og:description" content="Vue中过渡效果">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T04:57:53.557Z">
+<meta property="og:updated_time" content="2018-06-02T07:48:45.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git基础命令清单">
-<meta name="twitter:description" content="Git基础命令清单，很基础的，命令太多记不住的话及时查看。">
+<meta name="twitter:title" content="Vue过渡效果">
+<meta name="twitter:description" content="Vue中过渡效果">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/25/git常用操作/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/02/vue过渡及动画/"/>
 
 
 
 
 
-  <title>Git基础命令清单 | Rainbow's Notes</title>
+  <title>Vue过渡效果 | Rainbow's Notes</title>
   
 
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/git常用操作/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/vue过渡及动画/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rainbow">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git基础命令清单</h1>
+          <h1 class="post-title" itemprop="name headline">Vue过渡效果</h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T00:00:00+08:00">
-                2018-05-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T00:00:00+08:00">
+                2018-06-02
               </time>
             
 
@@ -366,8 +366,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Github/" itemprop="url" rel="index">
-                    <span itemprop="name">Github</span>
+                  <a href="/categories/Vue/" itemprop="url" rel="index">
+                    <span itemprop="name">Vue</span>
                   </a>
                 </span>
 
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,546
+                  712
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6
+                  3
                 </span>
               
             </div>
@@ -421,7 +421,7 @@
 
           
               <div class="post-description">
-                  Git基础命令清单，很基础的，命令太多记不住的话及时查看。
+                  Vue中过渡效果
               </div>
           
 
@@ -438,129 +438,41 @@
       
 
       
-        <h3 id="git的初始设定"><a href="#git的初始设定" class="headerlink" title="git的初始设定"></a>git的初始设定</h3><p><code>git init</code> 初始化项目仓库：会创建一个隐藏的<code>.git</code>文件夹</p>
-<p><code>git help config</code>  自动打开浏览器页面,显示对应命令的帮助文档 获取commit命令文档 <code>git help commit</code></p>
-<h3 id="第一次提交"><a href="#第一次提交" class="headerlink" title="第一次提交"></a>第一次提交</h3><blockquote>
-<p><code>git init</code> 在某个指定的文件夹内初始化仓库</p>
-<p>创建一个新文件</p>
-<p><code>git status</code></p>
-<p><code>git add 文件名</code> 提交到索引区</p>
-<p><code>git commit -m 提交描述</code> 将索引区内容提交到本地仓库</p>
-<p><code>git log</code> 查看提交历史</p>
-</blockquote>
-<h3 id="查看提交历史"><a href="#查看提交历史" class="headerlink" title="查看提交历史"></a>查看提交历史</h3><blockquote>
-<p><code>git log</code></p>
-<p><code>git log  --oneline</code> 将提交的历史简化为一行显示</p>
-<p><code>git log -p</code> 将提交历史详细输出</p>
-<p><code>git log --oneline -5</code> 最近5次履历</p>
-</blockquote>
-<h3 id="把握git状态"><a href="#把握git状态" class="headerlink" title="把握git状态"></a>把握git状态</h3><blockquote>
-<p><code>git status</code> 查看内容状态</p>
-<p><code>git checkout -- 文件名</code> 将修改的（尚未提交到索引区）文件恢复到修改前状态</p>
-<p><strong><code>git reset HEAD 文件名</code> </strong>将提交到索引区域文件退出索引区，再次使用<code>git checkout -- 文件名</code>将文件恢复到以前</p>
-</blockquote>
-<h3 id="比较修改内容"><a href="#比较修改内容" class="headerlink" title="比较修改内容"></a>比较修改内容</h3><blockquote>
-<p><code>git diff</code> 只能比较尚未添加到索引区的文件内容</p>
-<p><code>git diff --cached</code> 索引区内容比较</p>
-</blockquote>
-<h3 id="git文件操作"><a href="#git文件操作" class="headerlink" title="git文件操作"></a>git文件操作</h3><blockquote>
-<p><code>git add [file1 file2 ...]</code> 添加若干个文件到索引区</p>
-<p><code>git add .</code> 将当前工作目录内所有文件添加到索引区</p>
-<p><code>gir mv oldfileName newfileName</code> 文件移动，更多用于文件改名</p>
-<p><code>git rm --cached filename</code> 从索引区删除文件  （remove移出）</p>
-<p> <strong>区别：</strong></p>
-<p><strong><code>git reset HEAD 文件名</code></strong>   文件从索引区内退出，此时可以编辑</p>
-<p><code>git rm --cached filename</code>  会从索引区删除文件，会显示<code>untracked fileds</code>当commit后文件就会删除</p>
-</blockquote>
-<h3 id="git忽略管理"><a href="#git忽略管理" class="headerlink" title="git忽略管理"></a>git忽略管理</h3><p>例如在使用vue-cli中不希望node_modules文件被git管理</p>
-<p>方法：在<code>.gitignore</code>文件中设置不需要管理的文件即可 <a href="https://git-scm.com/docs/gitignore" target="_blank" rel="noopener">参考网页</a></p>
+        <h2 id="Vue动画"><a href="#Vue动画" class="headerlink" title="Vue动画"></a>Vue动画</h2><h3 id="使用自带的过渡类名"><a href="#使用自带的过渡类名" class="headerlink" title="使用自带的过渡类名"></a>使用自带的过渡类名</h3><p>类似于Vue过渡，同样具有那六个类名，<code>v-enter</code> <code>v-enter-to</code> <code>v-enter-active</code> <code>v-leave</code> <code>v-leave-to</code> <code>v-leave-active</code>  在其中定义元素过渡时候的动画</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  .cartoon-enter&#123;</span></span><br><span class="line"><span class="undefined">    background:orange;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .cartoon-enter-active&#123;</span></span><br><span class="line"><span class="undefined">    animation: cartoon 5s ;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  .cartoon-leave-active&#123;</span></span><br><span class="line"><span class="undefined">    animation: cartoon 5s reverse;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">  @keyframes cartoon&#123;</span></span><br><span class="line"><span class="undefined">    0%&#123;</span></span><br><span class="line"><span class="undefined">      transform:scale(0);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    50%&#123;</span></span><br><span class="line"><span class="undefined">      transform:scale(1.5);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    100%&#123;</span></span><br><span class="line"><span class="undefined">      transform:scale(1);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"show = !show"</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span>=<span class="string">"cartoon"</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width='200' height='200'"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis enim libero, at lacinia diam fermentum id. Pellentesque habitant morbi tristique senectus et netus.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这里的六个class是根据transition的name属性来自动生成的，通过给指定的class在style标签内定义过渡动画即可。</p>
+<p><code>v-enter</code> : 目标元素进入过渡开始时一瞬间的状态</p>
+<p><code>v-enter-to</code> ： 目标元素在过渡结束时的状态</p>
+<p><code>v-enter-active</code> ： 目标元素在整个过渡阶段的状态</p>
+<p><code>v-leave</code> ： 目标元素离开过渡开始时一瞬间的状态</p>
+<p><code>v-leave-to</code> ： 目标元素在过渡结束时的状态</p>
+<p><code>v-leave-active</code> ：目标元素在整个过渡阶段的状态</p>
+<h3 id="自定义过渡类名（需要借助特性）"><a href="#自定义过渡类名（需要借助特性）" class="headerlink" title="自定义过渡类名（需要借助特性）"></a>自定义过渡类名（需要借助特性）</h3><p>在transition中有以下几个特性来定义，这些<strong>特性可以指定过渡类名</strong>，可以<strong>直接引入各种动画库的类名</strong>，免去了自定义动画样式的步骤</p>
+<p>六个特性：</p>
 <blockquote>
-<p>在项目目录中创建<code>.gitignore</code></p>
-<p>在<code>.gitignore</code> 写入<code>*.temp</code>表示该文件结尾的文件不被管理</p>
+<p><code>enter-class</code></p>
+<p><code>enter-active-class</code></p>
+<p><code>enter-to-class</code></p>
+<p><code>leave-class</code></p>
+<p><code>leave-active-class</code></p>
+<p><code>leave-to-class</code></p>
 </blockquote>
-<h3 id="更新最后的提交"><a href="#更新最后的提交" class="headerlink" title="更新最后的提交"></a>更新最后的提交</h3><blockquote>
-<p><code>git commit -m &#39;message...&#39;</code></p>
-<p><code>git commit --amend</code> 已提交的文件再次修改提交但是不希望有提交记录，这条命令表示将修改的内容合并到上一次，不产生记录  输入<code>：wq</code> 退出，操作成功。</p>
-</blockquote>
-<h3 id="返回过去"><a href="#返回过去" class="headerlink" title="返回过去"></a>返回过去</h3><blockquote>
-<p><code>git reset --hard  HEAD</code> 返回最后一次提交版本</p>
-<p><code>git reset --hard  HEAD~</code> 返回倒数第二个版本</p>
-<p><code>git reset --hard  HEAD~n</code> 返回倒数第n个版本</p>
-</blockquote>
-<p>返回过去后再去未来： 记住id号码  <code>git reset --hard  HEAD 版本id</code>   那么就会回到id对应的版本</p>
-<p>当没记住id怎么回到未来</p>
+<p>这里引入animate库，直接将动画类名引入即可</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span>=<span class="string">"xxx"</span> <span class="attr">enter-active-class</span>=<span class="string">"animated tada"</span> <span class="attr">leave-active-class</span>=<span class="string">"animated bounceOutRight"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">      ...</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="多个组件的过渡"><a href="#多个组件的过渡" class="headerlink" title="多个组件的过渡"></a>多个组件的过渡</h3><p>由于过渡动画<code>enter</code>和<code>leave</code>是同时进行的，当有多个组件的时候，可能一个组件的退出与一个组件的进入同时发生的，造成混乱效果，引入mode选项，可以规定谁先进行</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app1"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"change"</span>&gt;</span>toggle<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">transition</span> <span class="attr">name</span>=<span class="string">"cartoon"</span> <span class="attr">enter-active-class</span>=<span class="string">"animated bounceIn"</span> <span class="attr">leave-active-class</span>=<span class="string">"animated bounceOut"</span> <span class="attr">mode</span>=<span class="string">"out-in"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"select"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  new Vue(&#123;</span></span><br><span class="line"><span class="undefined">  el: '#app1',</span></span><br><span class="line"><span class="undefined">  data: &#123;</span></span><br><span class="line"><span class="undefined">    select: 'component1',</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  methods:&#123;</span></span><br><span class="line"><span class="undefined">    change()&#123;</span></span><br><span class="line"><span class="undefined">      if(this.select==='component1')&#123;</span></span><br><span class="line"><span class="undefined">        this.select='component2'</span></span><br><span class="line"><span class="undefined">      &#125;else&#123;</span></span><br><span class="line"><span class="undefined">        this.select='component1'</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  components:&#123;</span></span><br><span class="line"><span class="undefined">    'component1':&#123;</span></span><br><span class="line"><span class="xml">      template: `<span class="tag">&lt;<span class="name">div</span>&gt;</span>第一个组件<span class="tag">&lt;/<span class="name">div</span>&gt;</span>`,</span></span><br><span class="line"><span class="undefined">    &#125;,</span></span><br><span class="line"><span class="undefined">    'component2':&#123;</span></span><br><span class="line"><span class="xml">      template: `<span class="tag">&lt;<span class="name">div</span>&gt;</span>第二个组件<span class="tag">&lt;/<span class="name">div</span>&gt;</span>`</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="CSS3中动画"><a href="#CSS3中动画" class="headerlink" title="CSS3中动画"></a>CSS3中动画</h3><p>animation:    动画名|持续时间|动画速度曲线|动画开始之前的延迟 动画播放次数 是否反向播放动画</p>
+<p>默认值：<code>animation: none 0 ease 0 1 normal;</code></p>
+<p>必须值： <code>animation: 动画名称 持续时间</code> </p>
 <blockquote>
-<p><code>git reflog [-n num]</code> 显示最近log记录对应的id</p>
-<p><code>git reset --hard [commit_id]</code> 利用id来跳转到未来版本</p>
+<p>animation-name</p>
+<p>animation-duration</p>
+<p>animation-timing-functions</p>
+<p>animation-delay</p>
+<p>animation-iteration-count</p>
+<p>animation-direction</p>
 </blockquote>
-<h3 id="使用分支"><a href="#使用分支" class="headerlink" title="使用分支"></a>使用分支</h3><blockquote>
-<p><code>git branch [name]</code> 创建新分支 <code>git branch clean_up</code></p>
-<p><code>git checkout branch_name</code> 跳转分支</p>
-<p><code>git branch</code>用于显示分支</p>
-</blockquote>
-<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><blockquote>
-<p><code>git merge branch_name</code>合并分支</p>
-<p><code>git branch -d branch_name</code>删除分支</p>
-</blockquote>
-<h3 id="分支冲突解决"><a href="#分支冲突解决" class="headerlink" title="分支冲突解决"></a>分支冲突解决</h3><p>多人同时编辑一个文件的时候，对相同代码在不同分支上进行不同操作，合并分支会产生冲突。</p>
-<blockquote>
-<p><code>git checkout -b [branch_name]</code> 建立一个新分支，并切换到该分支上</p>
-<p>解决方法：手动解决冲突代码，之后提交到仓库 <code>git commit -m &#39;merged by leader&#39;</code></p>
-</blockquote>
-<h3 id="使用tag标签"><a href="#使用tag标签" class="headerlink" title="使用tag标签"></a>使用tag标签</h3><p>任何软件系统，应用程序在发布时候都应该给一个版本号，用来管理每次发布的内容，便于管理。</p>
-<p>tag标签用于版本管理</p>
-<blockquote>
-<p>NNN.abc.xxx</p>
-<p>NNN:大版本号</p>
-<p>abc: 每次做出的小更新版本</p>
-<p>xxx: 每次bug修正时发布的版本</p>
-</blockquote>
-<blockquote>
-<p><code>git tag [tag_name]</code>  为当前仓库打一个标签</p>
-<p><code>git show [tag_name]</code></p>
-<p><code>git tag -d [tag_name]</code></p>
-<p><code>git tag</code> 显示当前版本标签</p>
-</blockquote>
-<h3 id="使用别名"><a href="#使用别名" class="headerlink" title="使用别名"></a>使用别名</h3><p>在git中可以将常用的命令设置简写</p>
-<blockquote>
-<p><code>git config --global alias.[name] [command_name]</code></p>
-<p><code>git config -l</code> 显示所有命令缩略语</p>
-</blockquote>
-<blockquote>
-<p><code>git config --global alias.br branch</code> 将branch命令简写为br</p>
-</blockquote>
-<h3 id="本地git仓库连接到远程github"><a href="#本地git仓库连接到远程github" class="headerlink" title="本地git仓库连接到远程github"></a>本地git仓库连接到远程github</h3><blockquote>
-<p><code>git remote add origin 远程仓库url地址</code> 将本地仓库关联到远程仓库</p>
-<p><code>git push -u origin master</code> 将本地仓库内容推送到远程  第一次推送的时候需要添加<code>-u</code>参数，该参数的作用是将本地的master分支推送到远程master分支上</p>
-<p><code>git push origin master</code> 推送命令简化，在第二次及以后的推送时使用该命令，默认推送到master分支上。</p>
-</blockquote>
-<h3 id="从远程github克隆仓库"><a href="#从远程github克隆仓库" class="headerlink" title="从远程github克隆仓库"></a>从远程github克隆仓库</h3><p>最好先建远程库，再从远程克隆到本地</p>
-<blockquote>
-<p><code>git clone 远程仓库url</code> 克隆远程仓库到本地</p>
-</blockquote>
-<h3 id="添加git忽略管理文件-gitignore"><a href="#添加git忽略管理文件-gitignore" class="headerlink" title="添加git忽略管理文件 .gitignore"></a>添加git忽略管理文件 <code>.gitignore</code></h3><p>在文件内添加 <code>node_modules</code></p>
-<h3 id="看视频中随便敲的"><a href="#看视频中随便敲的" class="headerlink" title="看视频中随便敲的"></a>看视频中随便敲的</h3><p>首次安装git需要设置用户名和邮箱<code>git config --global user.name &quot;Your Name&quot;</code> <code>git config --global user.email &quot;Your email&quot;</code></p>
-<p><code>pwd</code>  print working directory</p>
-<p><code>git config --list</code>列出所有的配置  <code>user.name user.email</code> 都在其中</p>
-<p><code>git status</code> 查看当前项目的状态</p>
-<p><code>git add 文件名</code> 将对应的文件添加到stage区域中，stage区域中的文件可以被提交到仓库</p>
-<p><code>git commit -m 操作描述</code>将stage内所有文件提交到仓库</p>
-<p><code>git add&#39;*.txt&#39;</code> 利用通配符将所有新txt文件添加到stage中</p>
-<p><code>git commit -m &#39;Add all the octocat txt files&#39; 将stage内所有的文件提交到仓库</code></p>
-<p><code>git log</code> 显示我们之前的操作</p>
-<p><code>git remote add origin url</code> <strong>将本地仓库提交到远程仓库 url为远程仓库地址</strong></p>
-<p><code>git push -u origin master</code> 远程仓库名为origin，默认分支名为master，-u表示保存配置，下次使用<code>git push</code>来直接提交到远程仓库</p>
-<p><code>git pull origin master</code>从远程仓库获取到本地</p>
-<p><code>git diff HEAD</code> 查看最近提交的不同之处</p>
-<p><code>git diff --staged</code> 用于查看staged区域中文件的变化</p>
-<p><code>git reset 文件名</code>将stage内对应的文件移出stage</p>
-<p><code>git checkout -- 文件名</code>直接删除文件</p>
-<p><code>git branch 分支名</code>创建新分支</p>
-<p><code>git checkout 分支名</code> 将当前操作的分支切换到对应的分支名上</p>
-<p><code>git re &#39;*.txt&#39;</code> 利用通配符，移除对应的文件</p>
-<p><code>git commit -m ’emove all the cats‘</code></p>
-<p><code>git merge 分支名</code> 将对应的分支名与当前的处在的分支合并</p>
-<p><code>git branch -d 分支名</code> 删除分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@keyframes animation-name&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -602,9 +514,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
           
-            <a href="/tags/Git/" rel="tag"># Git</a>
+            <a href="/tags/Vue基础知识/" rel="tag"># Vue基础知识</a>
           
         </div>
       
@@ -617,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/01/vueCli/" rel="next" title="Vue-cli笔记">
-                <i class="fa fa-chevron-left"></i> Vue-cli笔记
+              <a href="/2018/06/01/vue组件注册步骤/" rel="next" title="Vue注册组件步骤">
+                <i class="fa fa-chevron-left"></i> Vue注册组件步骤
               </a>
             
           </div>
@@ -626,10 +538,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/28/hexo及next常用指令/" rel="prev" title="Hexo+NexT常用指令">
-                Hexo+NexT常用指令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -828,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git的初始设定"><span class="nav-number">1.</span> <span class="nav-text">git的初始设定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第一次提交"><span class="nav-number">2.</span> <span class="nav-text">第一次提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看提交历史"><span class="nav-number">3.</span> <span class="nav-text">查看提交历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把握git状态"><span class="nav-number">4.</span> <span class="nav-text">把握git状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比较修改内容"><span class="nav-number">5.</span> <span class="nav-text">比较修改内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git文件操作"><span class="nav-number">6.</span> <span class="nav-text">git文件操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git忽略管理"><span class="nav-number">7.</span> <span class="nav-text">git忽略管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新最后的提交"><span class="nav-number">8.</span> <span class="nav-text">更新最后的提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回过去"><span class="nav-number">9.</span> <span class="nav-text">返回过去</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用分支"><span class="nav-number">10.</span> <span class="nav-text">使用分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并分支"><span class="nav-number">11.</span> <span class="nav-text">合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分支冲突解决"><span class="nav-number">12.</span> <span class="nav-text">分支冲突解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用tag标签"><span class="nav-number">13.</span> <span class="nav-text">使用tag标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用别名"><span class="nav-number">14.</span> <span class="nav-text">使用别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地git仓库连接到远程github"><span class="nav-number">15.</span> <span class="nav-text">本地git仓库连接到远程github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从远程github克隆仓库"><span class="nav-number">16.</span> <span class="nav-text">从远程github克隆仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加git忽略管理文件-gitignore"><span class="nav-number">17.</span> <span class="nav-text">添加git忽略管理文件 .gitignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#看视频中随便敲的"><span class="nav-number">18.</span> <span class="nav-text">看视频中随便敲的</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue动画"><span class="nav-number">1.</span> <span class="nav-text">Vue动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用自带的过渡类名"><span class="nav-number">1.1.</span> <span class="nav-text">使用自带的过渡类名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义过渡类名（需要借助特性）"><span class="nav-number">1.2.</span> <span class="nav-text">自定义过渡类名（需要借助特性）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个组件的过渡"><span class="nav-number">1.3.</span> <span class="nav-text">多个组件的过渡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3中动画"><span class="nav-number">1.4.</span> <span class="nav-text">CSS3中动画</span></a></li></ol></li></ol></div>
             
 
           </div>
