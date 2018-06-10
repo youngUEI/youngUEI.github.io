@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Day4背景边框列表链接和更复杂的选择器]]></title>
+    <url>%2F2018%2F06%2F10%2FDay4%E8%83%8C%E6%99%AF%E8%BE%B9%E6%A1%86%E5%88%97%E8%A1%A8%E9%93%BE%E6%8E%A5%E5%92%8C%E6%9B%B4%E5%A4%8D%E6%9D%82%E7%9A%84%E9%80%89%E6%8B%A9%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[1.背景背景的范围：默认背景范围是content+padding+border，假若背景图片宽高大于给定的区域，那么该背景图片就会产生切割，默认是从border外侧切割，切割后就是背景。 改变背景的默认范围通过改变background-clip的属性值，可以改变背景的作用范围。background-clip:border-box|padding-box|content-box|text border-box 背景从border外侧切开，背景范围为border+padding+content padding-box 背景从padding外侧切开，背景范围为padding+content content-box 背景从content外侧切开，背景范围为content text 从文字向外切除，背景只覆盖文字范围，利用该方法可以实现遮罩效果（之在文字处有背景） 注意:该text属性值只有webkit支持，所以在写该属性值的时候需要添加前缀 -webkit- 1234567891011121314151617&gt; .div&#123;&gt; width:200px;&gt; height:100px;&gt; border:10px solid transparent;&gt; padding:20px;&gt; margin:10px auto;&gt; background-image:url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3249243410,892137105&amp;fm=27&amp;gp=0.jpg);&gt; font-size:50px;&gt; /* text属性值必须添加-webkit-前缀 */&gt; -webkit-background-clip:text;&gt; color:transparent;&gt; font-weight:800;&gt; &#125;&gt; &lt;div class="div"&gt;&gt; 文字遮罩效果&gt; &lt;/div&gt;&gt; 背景基础 背景颜色 背景图像 背景重复 background-repeat 设置背景图片的重复方式 背景位置: background-position：x y; 设置背景图片在背景上的位置,值可以取关键字left center right bottom 背景图像：渐变background-image:linear-gradient(to bottom,orange,yellow); 背景附着background-attachment:scroll|fixed|local scroll : 背景跟随内容滚动 fixed: 元素内容滚动，背景不会滚动 背景尺寸background-size：可以调整背景图片的大小，可以将图片大小调整为区域的宽高，能够适合该区域。 注意：background-size是调整背景图片大小的 background-clip是定义背景范围，两者不同，不要混淆。 2.边框样式 border-image-source:url(...) borderimage-slice:声明left right top bottom四条切割线的偏移量 border-image-repeat： 声明5-8区域的重复方式 值为stretch | repeat | round | space 推荐使用round 可以比较智能的将图片用最可能小的缩放充满边界 具体介绍：]]></content>
+      <categories>
+        <category>百度前端技术学院2018</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Day3让简历有点色彩]]></title>
     <url>%2F2018%2F06%2F09%2FDay3%E8%AE%A9%E7%AE%80%E5%8E%86%E6%9C%89%E7%82%B9%E8%89%B2%E5%BD%A9%2F</url>
     <content type="text"><![CDATA[CSS工作原理先加载HTML，将HTML解析为DOM，之后解析CSS，并将CSS添加到对应的DOM节点上。 CSS选择器css选择器种类繁多，归结起来可以分为：简单选择器、属性选择器、伪类、伪元素、组合器、多用选择器 简单选择器主要包括元素名选择器、id选择器、class选择器、通用选择器(*) 属性选择器属性选择器是利用(方括号)根据元素的属性和属性值来匹配元素 属性存在选择器: [attr] [attr=val] [attr~=val] 选择具有某个属性或属性等于特定值的元素，其中[attr~=val] 选择具有某个具有某种属性并且值为多个，val只是其中一个 12345&gt; &lt;ul&gt;&gt; &lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS"&gt;CSS&lt;/a&gt;&lt;/li&gt;&gt; &lt;li&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML"&gt;HTML&lt;/a&gt;&lt;/li&gt;&gt; &lt;/ul&gt;&gt; [href^=https]{} 属性值子串选择器: [attr^=val] [attr$=val] [attr*=val] 其中[attr*=val]表示attr属性值包含子串val就可以被选中 前两种选择器的区别： 第一种：[attr=val] 只有当元素的attr属性值为val就会被选中 第二种：[attr*=val] 当元素的attr属性值存在子串val的时候就会被选中 伪类什么是伪类，其实现效果等价为给元素添加了一个类名，但是没有类名的存在，所以称为伪类 具体记录几个容易记混的伪类：(这里的E指的都是子元素) E:nth-of-type(n) : 选择父元素的第n个子元素E 1234567&gt; &lt;div class="demo"&gt;&gt; &lt;p&gt;p1&lt;/p&gt;&gt; &lt;p&gt;p2&lt;/p&gt;&gt; &lt;span&gt;span1&lt;/span&gt;&gt; &lt;p&gt;p3&lt;/p&gt;&gt; &lt;/div&gt;&gt; p:nth-of-type(3) 这里p3将会选中，因为父元素demo下的子元素一共有三个p元素，其中第三个为p3 E:nth-child(n) : 选择父元素下的第n个子元素E，当第n个子元素不是E的时候，该选择器无效 1234567&gt; &lt;div class="demo"&gt;&gt; &lt;p&gt;p1&lt;/p&gt;&gt; &lt;p&gt;p2&lt;/p&gt;&gt; &lt;span&gt;span1&lt;/span&gt;&gt; &lt;p&gt;p3&lt;/p&gt;&gt; &lt;/div&gt;&gt; p:nth-child(3) : 该选择器不会选中p3，因为在demo中第三个子元素为span不是p元素，要想选中p3需要使用p:nth-of-type(3) E:last-child : 选择父元素的最后一个子元素E，当最后一个子元素不是E的时候则不会生效 伪元素什么是伪元素：伪元素现实了给页面添加一个元素的效果，比如::after 效果是在选中元素后添加内容 具体的伪元素： ::before ::after ::first-line ::first-letter ::selection ::backdrop 组合器 A &gt; B B是A的直接子节点 A + B B是A的兄弟节点，B必须是A的紧邻的下一个节点 A ~ B A与B为兄弟节点，且B在A之后，可以是任意位置 CSS文字样式CSS中文字样式包括：文字字体样式，文字布局风格。这里主要列举了几个相对重要且自己平时使用频率较低的属性 文字字体样式主要关于字体的样式，采用什么类型的字体、字体的大小、字体是否加粗显示 text-transform: 将文字进行转换可以转换为首字母大写、全部转换为小写等效果，值为none|uppercase|lowercase|capitalize|full-width text-decoration: 该属性可以一次接受多个值，为字体添加多种样式，值为:none|underline|overline|line-through text-shadow:x y r color 文字阴影效果也是文字字体样式 文字布局风格主要关于文字的布局，如行高、文本对齐方式 text-align: left|right|center|justify line-height letter-spacing 为每个字母之间的距离 word-spacing 为每个单词之间的距离]]></content>
@@ -71,18 +82,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Vue中绑定class的几种方法]]></title>
-    <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E7%BB%91%E5%AE%9Aclass%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[vue中元素绑定class1.使用对象绑定1234567891011121314151617181920212223242526272829303132...&lt;style type="text/css" media="screen"&gt; .base-style&#123; height:100px; width:100px; border: 1px solid #ccc; &#125; .class1&#123; background-color: orange; &#125; .class2&#123; border-radius: 50%; &#125;&lt;/style&gt;...&lt;div id="app"&gt; &lt;div class="base-style" :class="&#123;class1:classValue1,class2:classValue2&#125;"&gt;&lt;/div&gt; &lt;div class="base-style" :class="classObj"&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classValue1:true, classValue2:true, classObj:&#123; class1: true, class2: false, &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 12&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;div class=&quot;base-style class1 &quot;&gt;&lt;/div&gt; 2.使用数组绑定1234567891011121314...&lt;div id="app"&gt; &lt;div class="base-style" :class="[classStyle1,classStyle2]"&gt;&lt;/div&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125; &#125;)&lt;/script&gt; 最终渲染为：&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt; 3.将class绑定到组件上12345678910111213141516171819...&lt;div id="app"&gt; &lt;my-components class="base-style"&gt;&lt;/my-components&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125;, components:&#123; 'my-components':&#123; template: '&lt;div class="class1 class2"&gt;&lt;/div&gt;' &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 123&lt;div id=&quot;app&quot;&gt; &lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;/div&gt; 组件上的class将会传递到组件template内 &lt;my-component class=&quot;base-style&quot;&gt;&lt;/my-component&gt;]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>Vue基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Vue中事件监听与触发]]></title>
     <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%2F</url>
     <content type="text"><![CDATA[v-on事件监听v-on监听某个事件，当事件触发后会执行相应的操作 以下为一个事件监听实例，具体效果为：页面上默认有三条数据，当用户在输入框输入并回车后，将数据添加到列表，点击列表项的x可以实现删除这一项。 12345678910111213141516171819202122232425&lt;div id="app"&gt; &lt;input v-model="newTodoText" placeholder="Add a todo" v-on:keyup.enter="todoList.unshift(newTodoText);newTodoText=''"/&gt; &lt;ol&gt; &lt;my-component v-for="(todo,index) in todoList" v-bind:key="index" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/my-component&gt; &lt;/ol&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; newTodoText:'', todoList :[ 'Learn Git', 'Learn Webpack', 'Learn Vue-cli' ] &#125;, components:&#123; 'my-component':&#123; template: `&lt;li&gt;&#123;&#123;thing&#125;&#125; &lt;button v-on:click="$emit('removething')"&gt;x&lt;/button&gt;&lt;/li&gt;`, props:['thing'], &#125; &#125; &#125;)&lt;/script&gt; 代码分析 组件my-component被点击后触发removething事件 在父组件中监听removething事件，等其触发后执行操作数组todoList的代码 其中： 当组件被循环的时候，需要添加key属性 1&lt;my-component v-for="(todo,index) in todoList" v-bind:key="index" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/my-component&gt; 当然这个组件可以重写为： 1&lt;li is="my-component" v-for="(todo,index) in todoList" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/li&gt;]]></content>
@@ -93,6 +92,18 @@
         <tag>Vue</tag>
         <tag>Vue基础知识</tag>
         <tag>Vue事件监听</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Vue中绑定class的几种方法]]></title>
+    <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E7%BB%91%E5%AE%9Aclass%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[vue中元素绑定class1.使用对象绑定1234567891011121314151617181920212223242526272829303132...&lt;style type="text/css" media="screen"&gt; .base-style&#123; height:100px; width:100px; border: 1px solid #ccc; &#125; .class1&#123; background-color: orange; &#125; .class2&#123; border-radius: 50%; &#125;&lt;/style&gt;...&lt;div id="app"&gt; &lt;div class="base-style" :class="&#123;class1:classValue1,class2:classValue2&#125;"&gt;&lt;/div&gt; &lt;div class="base-style" :class="classObj"&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classValue1:true, classValue2:true, classObj:&#123; class1: true, class2: false, &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 12&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;div class=&quot;base-style class1 &quot;&gt;&lt;/div&gt; 2.使用数组绑定1234567891011121314...&lt;div id="app"&gt; &lt;div class="base-style" :class="[classStyle1,classStyle2]"&gt;&lt;/div&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125; &#125;)&lt;/script&gt; 最终渲染为：&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt; 3.将class绑定到组件上12345678910111213141516171819...&lt;div id="app"&gt; &lt;my-components class="base-style"&gt;&lt;/my-components&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125;, components:&#123; 'my-components':&#123; template: '&lt;div class="class1 class2"&gt;&lt;/div&gt;' &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 123&lt;div id=&quot;app&quot;&gt; &lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;/div&gt; 组件上的class将会传递到组件template内 &lt;my-component class=&quot;base-style&quot;&gt;&lt;/my-component&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Vue基础知识</tag>
       </tags>
   </entry>
   <entry>
