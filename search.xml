@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Day17-18JS基础]]></title>
+    <url>%2F2018%2F06%2F19%2FDay17%E8%87%B318JS%2F</url>
+    <content type="text"><![CDATA[JavaScript splict() 该方法将字符串按照特定的规则拆分为数组， 123&gt; var string = &quot;T-shirt:14.99&quot;;&gt; string.split(&quot;:&quot;);&gt; slice(start,end) 截取字符串的某个子串 从start开始到end-1处结束 函数作用域和冲突： 12345&lt;script src=&quot;first.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;second.js&quot;&gt;&lt;/script&gt;&lt;script&gt; greeting();&lt;/script&gt; second.js因为是后引入的，所以first.js中变量函数相同的将会覆盖 事件 事件对象： event 或 e 事件对象表示绑定事件的元素本身 event.style.background=”red” 给元素设置背景色 阻止默认事件： e.preventDefault() 阻止事件冒泡： e.stopPropagation() 当然我们可以利用事件冒泡机制来实现事件委托 event中有很多属性，其中event.target指向了绑定事件元素本身。 关于setAttribute() 该方式设置元素的属性，setAttribute(&#39;class&#39;,xxx) 但是没有setAttribute(&#39;background&#39;,xxx) 因为background是元素style的属性，正确使用为：element.style.background = &#39;grb(xxx)&#39;; 练习代码 Decimal-system-to-binary-system Decimal-system-to-binary-system2 为你填坑：以为这样就完事了？ 那就错了，注意要提前取出数组长度 123456&gt; if(arr.length &lt; binLength)&#123;&gt; for(var i=0;i&lt; binLength-arr.length;i++)&#123;&gt; arr.unshift(0);&gt; &#125;&gt; &#125;&gt; 正确代码： 1234567&gt; var initLength = arr.length;&gt; if(arr.length &lt; binLength)&#123;&gt; for(var i=0;i&lt; binLength-initLength;i++)&#123;&gt; arr.unshift(0);&gt; &#125;&gt; &#125;&gt; Guess-3-game multiplication-9X9-table 简历招呼效果 12var myDate = new Date();var hour = myDate.getHours(); //返回小时格式]]></content>
+      <categories>
+        <category>百度前端技术学院2018</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Day16感受JS乐趣]]></title>
     <url>%2F2018%2F06%2F18%2FDay16JS%2F</url>
     <content type="text"><![CDATA[JavaScript 脚本语言: 是一种不需要编译的编程语言，传统的编译型编程语言（C Java）需要先编译成二进制机器码，再交给机器执行，脚本语言写出的代码就是最终执行文件，效率高。 在JS中，应用程序编程接口APIs会提供很欠打的功能，分为两类: 浏览器APIs，存在于浏览器中，包括文档对象模型API(DOM)、地理位置API、画布等API 第三方APIs：默认没有安装到浏览器内，可以从网络上获取。如谷歌地图API JavaScript和ECMAScript的区别： ECMAScript是一种规范，定义了JavaScript语言规则 JavaScript是一种解释型脚本语言，遵循了ECMAScript规范 ECMAScript6是一种第六版新规范，相对于ECMAScript规范有显著的变化和改进，同义词：ES6、ES2015、ECMAScript 2015 JavaScript语法 document.write(...) 向文档流中写入内容，注意： 在文档加载完毕后执行该语句，整个HTML页面将会被重写 声明变量类型: 在声明新变量时，可以使用new关键字来声明其类型,js变量均为对象，当声明了一个变量时，就创建了一个新对象。 疑问：什么时候需要声明变量类型？ var x = new Number; var y = new Boolean; 在js中所有事物都是对象，string、number、array 练习 加减乘除运算 简历 简单猜数字小游戏]]></content>
