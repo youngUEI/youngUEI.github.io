@@ -12,6 +12,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Day12-15做一个复杂的页面]]></title>
+    <url>%2F2018%2F06%2F17%2FDay12and15%E7%9B%B8%E5%AF%B9%E5%A4%8D%E6%9D%82%E9%A1%B5%E9%9D%A2%2F</url>
+    <content type="text"><![CDATA[页面要求 最左侧一列要求自适应浏览器高度，左上面4个按钮相对浏览器左上角固定位置，左下方两个按钮相对浏览器左下角固定位置 左侧第二列(蓝色背景色)导航列固定宽度，高度也是自适应浏览器高度，最下面的Monthly Goals部分的内容相对浏览器下边固定位置 整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置 白色区域左侧列固定宽度，右侧列自适应宽度 实现过程中遇到并解决的问题 实现滚动效果，但是要隐藏滚动条 隐藏滚动条 解决方案： 12345&lt;div class="wrapper"&gt; &lt;div class="inner-wrapper"&gt; 很多内容，高度会超出inner-wrapper &lt;/div&gt;&lt;/div 内层容器：定义其宽度大于外层容器17px（这里17px为滚动条宽度），设置内层容器overflow:auto 当其内容高度高于内层容器时，自动产生滚动条。 外层容器：设置其overflow:hidden ,隐藏内层容器的滚动条。（因为内层宽度大于外层宽度17px） 最下面的Monthly Goals部分固定在浏览器下方（相当于sticky footer布局） 解决方案： 有多种解决方案，固定高度、flexbox等方案，我在练习中使用的是固定高度解决方案 固定高度：sticky-footer-calc 123456&lt;div class="wrapper"&gt; &lt;div class="inner-wrapper"&gt; 很多内容... &lt;/div&gt; &lt;div class="footer"&gt;Footer&lt;/div&gt;&lt;/div&gt; 其实现原理很简单，首先确定footer 的高度，inner-wrapper的min-height为calc(100% - footer的高度),确保在inner-wrapper没有内容时，高度仍会撑起整个容器高度。 缺点是：当布局完成后，改变footer高度影响布局 flexbox布局： sticky-footer-flexbox 优点：可以随意改变footer的高度，布局不受影响。 calc() 使用注意：运算符之间必须用空格隔开 calc(100% - 50px) 代码地址相对复杂的页面]]></content>
+      <categories>
+        <category>百度前端技术学院2018</category>
+      </categories>
+      <tags>
+        <tag>切图</tag>
+        <tag>基本布局</tag>
+        <tag>写一个网页</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Day9-11完成一个简单页面]]></title>
     <url>%2F2018%2F06%2F15%2FDay9and11%E5%AE%8C%E6%88%90%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E9%A1%B5%E9%9D%A2%2F</url>
     <content type="text"><![CDATA[切图基础传统的切图方法 利用参考线把准备切的图标框选出来 使用切片工具来切出图标 选择存储为web所用合适，保存为png-24格式，注意保存的时候切片要选择所有用户切片 自定义切图专用工作区 信息面板：该面板会显示选取的像素宽高，以及文档的宽高 字符面板：该面板会显示以psd保存的web中字体样式及大小 写一个网页由于给出的是一个psd及jpg文件，图片尺寸达到了1600x6272 ，然而屏幕宽度只有1366px，所以第一步产生了很大的困惑，做起来很纠结。 题目要求按照设计尺寸写web,但是实际尺寸很大，于是我进行了一些缩放 布局用的比较少，只用到了flex布局，用于多列布局 代码中存在冗余，比如container样式可以复用 写这个网页用了接近两天时间，最主要是尺寸问题纠结了好久，所以只把基本布局完成了，尚未写导师浮动效果，后期会填上这个坑的 文字两端对齐效果太差 后期 代码优化，减少冗余 阅读编码规范 将代码补齐，浮动效果，文字排版 参考这位同学完全实现了各项要求 梁嘉欣]]></content>
