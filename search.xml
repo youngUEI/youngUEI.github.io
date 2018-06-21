@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Day19找到那个DOM]]></title>
+    <url>%2F2018%2F06%2F21%2F2018-06-21Day19%E6%89%BE%E5%88%B0DOM%2F</url>
+    <content type="text"><![CDATA[DOMdocument-object-model：分为3个不同的部分，核心DOM针对任何结构化的文档模型，XML-DOM针对XML，HTML-DOM针对HTML 以下针对于HTML-DOM：HTML-DOM是关于如何获取、修改、添加或删除HTML元素的标准。 HTML-DOM中，所有事物都是节点 parentNode firstChild lastChild nextSibling previousSibling childNodes数组 HTML-DOM中，操作DOM节点方法有很多 getElementById appendChild(node) removeChild(node) HTML-DOM常用方法 推荐使用主流的选择元素方法：querySelecotor(选择器)该方法返回遇到的第一个符合条件的元素 querySelectorAll 以类数组形式返回所有匹配的元素； 创建元素：createElement createTextNode HTML-DOM中，属性有很多，其中nodeName为节点名称，nodeValue为节点值，其中元素节点值为undefined，文本节点值为文本本身，属性节点值为属性值 （每个HTML元素的属性为属性节点） nodeType为节点类型，只读，返回数字；childNodes属性是一个类数组，包含了父节点的所有子节点 childNodes[0]; textContent属性： 区别textContent和nodeValue： textContent：返回节点的文本内容，当有子节点的时候，获取子节点中的文本,忽略子节点本身 nodeValue: 返回节点的值，元素节点为undefined，文本节点为文本本身，但是该属性与前者不同 12345678910// &lt;div id=&quot;divA&quot;&gt;This is &lt;span&gt;some&lt;/span&gt; text&lt;/div&gt;// Get the text content:var text = document.getElementById(&quot;divA&quot;).textContent;// |text| is set to &quot;This is some text&quot;.// Set the text content:document.getElementById(&quot;divA&quot;).textContent = &quot;This is some text&quot;;// The HTML for divA is now:// &lt;div id=&quot;divA&quot;&gt;This is some text&lt;/div&gt; Window对象 获取窗口宽高： window.innerWidth window.innerHeight 代码练习 task-list]]></content>
+      <categories>
+        <category>百度前端技术学院2018</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>DOM</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Day17-18JS基础]]></title>
     <url>%2F2018%2F06%2F19%2FDay17%E8%87%B318JS%2F</url>
     <content type="text"><![CDATA[JavaScript splict() 该方法将字符串按照特定的规则拆分为数组， 123&gt; var string = &quot;T-shirt:14.99&quot;;&gt; string.split(&quot;:&quot;);&gt; slice(start,end) 截取字符串的某个子串 从start开始到end-1处结束 函数作用域和冲突： 12345&lt;script src=&quot;first.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;second.js&quot;&gt;&lt;/script&gt;&lt;script&gt; greeting();&lt;/script&gt; second.js因为是后引入的，所以first.js中变量函数相同的将会覆盖 事件 事件对象： event 或 e 事件对象表示绑定事件的元素本身 event.style.background=”red” 给元素设置背景色 阻止默认事件： e.preventDefault() 阻止事件冒泡： e.stopPropagation() 当然我们可以利用事件冒泡机制来实现事件委托 event中有很多属性，其中event.target指向了绑定事件元素本身。 关于setAttribute() 该方式设置元素的属性，setAttribute(&#39;class&#39;,xxx) 但是没有setAttribute(&#39;background&#39;,xxx) 因为background是元素style的属性，正确使用为：element.style.background = &#39;grb(xxx)&#39;; 练习代码 Decimal-system-to-binary-system Decimal-system-to-binary-system2 为你填坑：以为这样就完事了？ 那就错了，注意要提前取出数组长度 123456&gt; if(arr.length &lt; binLength)&#123;&gt; for(var i=0;i&lt; binLength-arr.length;i++)&#123;&gt; arr.unshift(0);&gt; &#125;&gt; &#125;&gt; 正确代码： 1234567&gt; var initLength = arr.length;&gt; if(arr.length &lt; binLength)&#123;&gt; for(var i=0;i&lt; binLength-initLength;i++)&#123;&gt; arr.unshift(0);&gt; &#125;&gt; &#125;&gt; Guess-3-game multiplication-9X9-table 简历招呼效果 12var myDate = new Date();var hour = myDate.getHours(); //返回小时格式]]></content>
@@ -93,17 +105,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Day2做一个在线简历]]></title>
-    <url>%2F2018%2F06%2F08%2FDay2%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AE%80%E5%8E%86%2F</url>
-    <content type="text"><![CDATA[阅读延伸W3CSchool的HTML教学 在线教程 &lt;a href=&quot;....&quot;&gt;This is a link&lt;/a&gt; 区别href与src : 参考 href: 表示超文本引用，用于引用网络资源的位置，可以通过锚点可以跳转到目标资源上，当然也可以引入css，常用在link a 标签上，&lt;link href=&quot;reset.css&quot; rel=&quot;stylesheet&quot;/&gt;浏览器会从对应的地址上下载css文件，下载过程中，并不会停止对当前文档的处理，这也是*建议使用link引用css而不使用@import加载css的原因 src ： 即source，是页面中不可缺少的一部分，src指向的内容会嵌入到文档中标签所在位置，常用在script img 上。 &lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt; 该标签会引入demo.js文件中js代码，替换此处的script标签 总而言之： href表示当前文档与引用资源之间建立联系，src用于替换当前元素 HTML图像： &lt;img src=&#39;图片地址&#39; width=&#39;66&#39; height=&#39;66&#39;&gt; 定义img图像需要将尺寸以标签属性的形式声明 HTML标签及标签内属性大小写不敏感，所以在自定义标签的时候可以使用中划线的方法 &lt;my-tag title=&#39;this is my tag&#39;&gt;&lt;/my-tag&gt; 适用于大多数标签的常用的几个HTML属性：class id style title 引用标签：较短语句的引用&lt;q&gt;...&lt;/q&gt; 较长的引用&lt;blockquote&gt;...&lt;/blockquote &lt;q&gt;会将元素内容前后添加引号来在页面上显示 &lt;blockquote&gt; 会将元素内容进行缩进来在页面上显示 &lt;a&gt;标签定义锚点，在同一文章内可以利用锚点跳转,使用name来定义锚点 1234&gt; &gt; &lt;a name="tips"&gt;基本的注意事项&lt;/a&gt;&gt; &gt; ....&gt; &gt; &lt;a href="#tips"&gt;跳转到注意事项&lt;/a&gt;&gt; &gt; 注意： 在使用链接标签链接地址为一个文件夹的时候要注意href的地址正确写法 1234567&gt; &lt;a href="http://www.w3school.com.cn/html"&gt;该链接会产生两次HTTP请求&lt;/a&gt;&gt; &lt;!-- 如果子文件夹的末尾没有正斜杠，就会产生两次HTTP请求 --&gt;&gt; &lt;!-- 应为当子文件夹没有正斜杠，服务器会添加正斜杠到该地址，另外创建了一个新请求 --&gt;&gt; .... &gt; &lt;!-- 正确写法 --&gt;&gt; &lt;a href="http://www.w3school.com.cn/html/"&gt;跳转到注意事项&lt;/a&gt;&gt; &lt;img&gt; 创建图像映射，图像标签的usemap属性来定义图像映射,该属性值为&lt;map&gt;元素的name或id属性值 图像映射： 一个图像建立多个链接，点击图像的不同区域跳转到不同的链接地址 1234567&gt; &gt; &lt;img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&amp;quality=100&amp;size=b4000_4000&amp;sec=1528507118&amp;di=52579fb03028f32458941a0083d04dc5&amp;src=http://img3.duitang.com/uploads/item/201509/04/20150904014041_Lw8Cv.jpeg" alt="" width="166" height="166" usemap="#my-map"&gt;&gt; &gt; &lt;!-- img标签通过usemap属性来链接到map标签 --&gt;&gt; &gt; &lt;map name='my-map' id="my-map"&gt;&gt; &gt; &lt;area shape="circle" coords="0,0,30" href="https://baidu.com/"/&gt;&gt; &gt; &lt;area shape="rect" coords="0,88,166,166" href="http://www.w3school.com.cn/"/&gt;&gt; &gt; &lt;/map&gt;&gt; &gt; area 标签中coords属性：值为像素，起点为图片的左上角 框架： &lt;frameset&gt; 标签用于定义如何分隔窗口，其中属性值rows/columns定义了每行或每列占据屏幕的面积,&lt;frame&gt;标签用于定义每个框架 12345&gt; &gt; &lt;frameset cols="25%,75%"&gt;&gt; &gt; &lt;frame src="frame_a.html"&gt;&gt; &gt; &lt;frame src="frame_b.html"&gt;&gt; &gt; &lt;/frameset&gt;&gt; &gt; 实现了页面分隔为左右两部分 内联框架：指在网页内显示网页,使用&lt;iframe&gt;标签 12&gt; &gt; &lt;iframe src=&quot;...&quot; width=&quot;80&quot; height=&quot;100&quot;&gt;&lt;/iframe&gt;&gt; &gt; &lt;noscript&gt; 该标签用于在浏览器不支持js的时候显示相应的文本 &lt;noscript&gt;你的浏览器不支持js&lt;/noscript&gt; HTML中的实体字符 在HTML中，某些字符有特殊意义,比如&lt; 代表标签的开始，但是有时候需要使用特殊字符，这里引入了实体字符，其中&amp;nbsp 代表 空格 ​]]></content>
-      <categories>
-        <category>百度前端技术学院2018</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Day1为什么学前端]]></title>
     <url>%2F2018%2F06%2F08%2FDay1%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6%E5%89%8D%E7%AB%AF%2F</url>
     <content type="text"><![CDATA[学习前端断断续续接近半年，终于赶上这次百度前端技术学院开课了，趁机会系统学习一下前端基础知识。 几个基础的概念 HTML5 : 这是HTML的新标准，其中添加好多新标签与属性，目前开发者正热情的推广该版本 XML : 可扩展标记语言，用于传输和存储数据 XHTML : 是HTML的严格版本，该标准对语法要求严格 XML 与 XHTML HTML区别： XML 是用于存储和传输数据的，其重点为数据的内容；XHTML HTML是用于显示信息的，其重点为数据的展示。 后端的几个概念： 只是粗略的了解node php 还尚未深入。 待续……]]></content>
@@ -113,6 +114,17 @@
       <tags>
         <tag>HTML</tag>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Day2做一个在线简历]]></title>
+    <url>%2F2018%2F06%2F08%2FDay2%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AE%80%E5%8E%86%2F</url>
+    <content type="text"><![CDATA[阅读延伸W3CSchool的HTML教学 在线教程 &lt;a href=&quot;....&quot;&gt;This is a link&lt;/a&gt; 区别href与src : 参考 href: 表示超文本引用，用于引用网络资源的位置，可以通过锚点可以跳转到目标资源上，当然也可以引入css，常用在link a 标签上，&lt;link href=&quot;reset.css&quot; rel=&quot;stylesheet&quot;/&gt;浏览器会从对应的地址上下载css文件，下载过程中，并不会停止对当前文档的处理，这也是*建议使用link引用css而不使用@import加载css的原因 src ： 即source，是页面中不可缺少的一部分，src指向的内容会嵌入到文档中标签所在位置，常用在script img 上。 &lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt; 该标签会引入demo.js文件中js代码，替换此处的script标签 总而言之： href表示当前文档与引用资源之间建立联系，src用于替换当前元素 HTML图像： &lt;img src=&#39;图片地址&#39; width=&#39;66&#39; height=&#39;66&#39;&gt; 定义img图像需要将尺寸以标签属性的形式声明 HTML标签及标签内属性大小写不敏感，所以在自定义标签的时候可以使用中划线的方法 &lt;my-tag title=&#39;this is my tag&#39;&gt;&lt;/my-tag&gt; 适用于大多数标签的常用的几个HTML属性：class id style title 引用标签：较短语句的引用&lt;q&gt;...&lt;/q&gt; 较长的引用&lt;blockquote&gt;...&lt;/blockquote &lt;q&gt;会将元素内容前后添加引号来在页面上显示 &lt;blockquote&gt; 会将元素内容进行缩进来在页面上显示 &lt;a&gt;标签定义锚点，在同一文章内可以利用锚点跳转,使用name来定义锚点 1234&gt; &gt; &lt;a name="tips"&gt;基本的注意事项&lt;/a&gt;&gt; &gt; ....&gt; &gt; &lt;a href="#tips"&gt;跳转到注意事项&lt;/a&gt;&gt; &gt; 注意： 在使用链接标签链接地址为一个文件夹的时候要注意href的地址正确写法 1234567&gt; &lt;a href="http://www.w3school.com.cn/html"&gt;该链接会产生两次HTTP请求&lt;/a&gt;&gt; &lt;!-- 如果子文件夹的末尾没有正斜杠，就会产生两次HTTP请求 --&gt;&gt; &lt;!-- 应为当子文件夹没有正斜杠，服务器会添加正斜杠到该地址，另外创建了一个新请求 --&gt;&gt; .... &gt; &lt;!-- 正确写法 --&gt;&gt; &lt;a href="http://www.w3school.com.cn/html/"&gt;跳转到注意事项&lt;/a&gt;&gt; &lt;img&gt; 创建图像映射，图像标签的usemap属性来定义图像映射,该属性值为&lt;map&gt;元素的name或id属性值 图像映射： 一个图像建立多个链接，点击图像的不同区域跳转到不同的链接地址 1234567&gt; &gt; &lt;img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&amp;quality=100&amp;size=b4000_4000&amp;sec=1528507118&amp;di=52579fb03028f32458941a0083d04dc5&amp;src=http://img3.duitang.com/uploads/item/201509/04/20150904014041_Lw8Cv.jpeg" alt="" width="166" height="166" usemap="#my-map"&gt;&gt; &gt; &lt;!-- img标签通过usemap属性来链接到map标签 --&gt;&gt; &gt; &lt;map name='my-map' id="my-map"&gt;&gt; &gt; &lt;area shape="circle" coords="0,0,30" href="https://baidu.com/"/&gt;&gt; &gt; &lt;area shape="rect" coords="0,88,166,166" href="http://www.w3school.com.cn/"/&gt;&gt; &gt; &lt;/map&gt;&gt; &gt; area 标签中coords属性：值为像素，起点为图片的左上角 框架： &lt;frameset&gt; 标签用于定义如何分隔窗口，其中属性值rows/columns定义了每行或每列占据屏幕的面积,&lt;frame&gt;标签用于定义每个框架 12345&gt; &gt; &lt;frameset cols="25%,75%"&gt;&gt; &gt; &lt;frame src="frame_a.html"&gt;&gt; &gt; &lt;frame src="frame_b.html"&gt;&gt; &gt; &lt;/frameset&gt;&gt; &gt; 实现了页面分隔为左右两部分 内联框架：指在网页内显示网页,使用&lt;iframe&gt;标签 12&gt; &gt; &lt;iframe src=&quot;...&quot; width=&quot;80&quot; height=&quot;100&quot;&gt;&lt;/iframe&gt;&gt; &gt; &lt;noscript&gt; 该标签用于在浏览器不支持js的时候显示相应的文本 &lt;noscript&gt;你的浏览器不支持js&lt;/noscript&gt; HTML中的实体字符 在HTML中，某些字符有特殊意义,比如&lt; 代表标签的开始，但是有时候需要使用特殊字符，这里引入了实体字符，其中&amp;nbsp 代表 空格 ​]]></content>
+      <categories>
+        <category>百度前端技术学院2018</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
@@ -152,18 +164,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Vue中绑定class的几种方法]]></title>
-    <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E7%BB%91%E5%AE%9Aclass%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[vue中元素绑定class1.使用对象绑定1234567891011121314151617181920212223242526272829303132...&lt;style type="text/css" media="screen"&gt; .base-style&#123; height:100px; width:100px; border: 1px solid #ccc; &#125; .class1&#123; background-color: orange; &#125; .class2&#123; border-radius: 50%; &#125;&lt;/style&gt;...&lt;div id="app"&gt; &lt;div class="base-style" :class="&#123;class1:classValue1,class2:classValue2&#125;"&gt;&lt;/div&gt; &lt;div class="base-style" :class="classObj"&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classValue1:true, classValue2:true, classObj:&#123; class1: true, class2: false, &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 12&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;div class=&quot;base-style class1 &quot;&gt;&lt;/div&gt; 2.使用数组绑定1234567891011121314...&lt;div id="app"&gt; &lt;div class="base-style" :class="[classStyle1,classStyle2]"&gt;&lt;/div&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125; &#125;)&lt;/script&gt; 最终渲染为：&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt; 3.将class绑定到组件上12345678910111213141516171819...&lt;div id="app"&gt; &lt;my-components class="base-style"&gt;&lt;/my-components&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125;, components:&#123; 'my-components':&#123; template: '&lt;div class="class1 class2"&gt;&lt;/div&gt;' &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 123&lt;div id=&quot;app&quot;&gt; &lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;/div&gt; 组件上的class将会传递到组件template内 &lt;my-component class=&quot;base-style&quot;&gt;&lt;/my-component&gt;]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>Vue基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Vue中事件监听与触发]]></title>
     <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%2F</url>
     <content type="text"><![CDATA[v-on事件监听v-on监听某个事件，当事件触发后会执行相应的操作 以下为一个事件监听实例，具体效果为：页面上默认有三条数据，当用户在输入框输入并回车后，将数据添加到列表，点击列表项的x可以实现删除这一项。 12345678910111213141516171819202122232425&lt;div id="app"&gt; &lt;input v-model="newTodoText" placeholder="Add a todo" v-on:keyup.enter="todoList.unshift(newTodoText);newTodoText=''"/&gt; &lt;ol&gt; &lt;my-component v-for="(todo,index) in todoList" v-bind:key="index" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/my-component&gt; &lt;/ol&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; newTodoText:'', todoList :[ 'Learn Git', 'Learn Webpack', 'Learn Vue-cli' ] &#125;, components:&#123; 'my-component':&#123; template: `&lt;li&gt;&#123;&#123;thing&#125;&#125; &lt;button v-on:click="$emit('removething')"&gt;x&lt;/button&gt;&lt;/li&gt;`, props:['thing'], &#125; &#125; &#125;)&lt;/script&gt; 代码分析 组件my-component被点击后触发removething事件 在父组件中监听removething事件，等其触发后执行操作数组todoList的代码 其中： 当组件被循环的时候，需要添加key属性 1&lt;my-component v-for="(todo,index) in todoList" v-bind:key="index" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/my-component&gt; 当然这个组件可以重写为： 1&lt;li is="my-component" v-for="(todo,index) in todoList" v-bind:thing="todo" v-on:removething="todoList.splice(index,1)"&gt;&#123;&#123;todo&#125;&#125; &lt;/li&gt;]]></content>
@@ -174,6 +174,18 @@
         <tag>Vue</tag>
         <tag>Vue基础知识</tag>
         <tag>Vue事件监听</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Vue中绑定class的几种方法]]></title>
+    <url>%2F2018%2F05%2F31%2FVue%E4%B8%AD%E7%BB%91%E5%AE%9Aclass%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[vue中元素绑定class1.使用对象绑定1234567891011121314151617181920212223242526272829303132...&lt;style type="text/css" media="screen"&gt; .base-style&#123; height:100px; width:100px; border: 1px solid #ccc; &#125; .class1&#123; background-color: orange; &#125; .class2&#123; border-radius: 50%; &#125;&lt;/style&gt;...&lt;div id="app"&gt; &lt;div class="base-style" :class="&#123;class1:classValue1,class2:classValue2&#125;"&gt;&lt;/div&gt; &lt;div class="base-style" :class="classObj"&gt;&lt;/div&gt;&lt;/div&gt;&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classValue1:true, classValue2:true, classObj:&#123; class1: true, class2: false, &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 12&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;div class=&quot;base-style class1 &quot;&gt;&lt;/div&gt; 2.使用数组绑定1234567891011121314...&lt;div id="app"&gt; &lt;div class="base-style" :class="[classStyle1,classStyle2]"&gt;&lt;/div&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125; &#125;)&lt;/script&gt; 最终渲染为：&lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt; 3.将class绑定到组件上12345678910111213141516171819...&lt;div id="app"&gt; &lt;my-components class="base-style"&gt;&lt;/my-components&gt;&lt;/div&gt;...&lt;script type="text/javascript"&gt; new Vue(&#123; el: "#app", data:&#123; classStyle1: 'class1', classStyle2: 'class2', &#125;, components:&#123; 'my-components':&#123; template: '&lt;div class="class1 class2"&gt;&lt;/div&gt;' &#125; &#125; &#125;)&lt;/script&gt; 最终渲染为： 123&lt;div id=&quot;app&quot;&gt; &lt;div class=&quot;base-style class1 class2&quot;&gt;&lt;/div&gt;&lt;/div&gt; 组件上的class将会传递到组件template内 &lt;my-component class=&quot;base-style&quot;&gt;&lt;/my-component&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Vue基础知识</tag>
       </tags>
   </entry>
   <entry>
