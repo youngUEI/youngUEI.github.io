@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="切图,基本布局,写一个网页," />
+  <meta name="keywords" content="JavaScript,DOM," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="页面要求  最左侧一列要求自适应浏览器高度，左上面4个按钮相对浏览器左上角固定位置，左下方两个按钮相对浏览器左下角固定位置 左侧第二列(蓝色背景色)导航列固定宽度，高度也是自适应浏览器高度，最下面的Monthly Goals部分的内容相对浏览器下边固定位置 整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置 白色区域左侧列固定宽度，右侧列自适应宽度   实现过程中遇到并解决的问">
-<meta name="keywords" content="切图,基本布局,写一个网页">
+<meta name="description" content="HTML-DOM Text对象Text对象代表HTML表单中的文本输入域，在HTML中每次创建了一个input，那么就会生成一个Text对象，Text对象拥有属性和方法 Text对象属性  maxLength: 返回或设置文本域的最大字符数 disabled: 返回或设置文本域是否应该被禁用 defaultValue:返回或设置文本域的默认值  Text对象方法  blur() 失去焦点 focu">
+<meta name="keywords" content="JavaScript,DOM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Day12-15做一个复杂的页面">
-<meta property="og:url" content="http://yoursite.com/2018/06/17/Day12and15相对复杂页面/index.html">
+<meta property="og:title" content="Day20与Day21和页面互动">
+<meta property="og:url" content="http://yoursite.com/2018/06/26/Day20与页面互动/index.html">
 <meta property="og:site_name" content="Rainbow&#39;s Notes">
-<meta property="og:description" content="页面要求  最左侧一列要求自适应浏览器高度，左上面4个按钮相对浏览器左上角固定位置，左下方两个按钮相对浏览器左下角固定位置 左侧第二列(蓝色背景色)导航列固定宽度，高度也是自适应浏览器高度，最下面的Monthly Goals部分的内容相对浏览器下边固定位置 整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置 白色区域左侧列固定宽度，右侧列自适应宽度   实现过程中遇到并解决的问">
+<meta property="og:description" content="HTML-DOM Text对象Text对象代表HTML表单中的文本输入域，在HTML中每次创建了一个input，那么就会生成一个Text对象，Text对象拥有属性和方法 Text对象属性  maxLength: 返回或设置文本域的最大字符数 disabled: 返回或设置文本域是否应该被禁用 defaultValue:返回或设置文本域的默认值  Text对象方法  blur() 失去焦点 focu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-20T05:21:15.679Z">
+<meta property="og:updated_time" content="2018-06-26T05:29:16.352Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Day12-15做一个复杂的页面">
-<meta name="twitter:description" content="页面要求  最左侧一列要求自适应浏览器高度，左上面4个按钮相对浏览器左上角固定位置，左下方两个按钮相对浏览器左下角固定位置 左侧第二列(蓝色背景色)导航列固定宽度，高度也是自适应浏览器高度，最下面的Monthly Goals部分的内容相对浏览器下边固定位置 整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置 白色区域左侧列固定宽度，右侧列自适应宽度   实现过程中遇到并解决的问">
+<meta name="twitter:title" content="Day20与Day21和页面互动">
+<meta name="twitter:description" content="HTML-DOM Text对象Text对象代表HTML表单中的文本输入域，在HTML中每次创建了一个input，那么就会生成一个Text对象，Text对象拥有属性和方法 Text对象属性  maxLength: 返回或设置文本域的最大字符数 disabled: 返回或设置文本域是否应该被禁用 defaultValue:返回或设置文本域的默认值  Text对象方法  blur() 失去焦点 focu">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/17/Day12and15相对复杂页面/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/26/Day20与页面互动/"/>
 
 
 
 
 
-  <title>Day12-15做一个复杂的页面 | Rainbow's Notes</title>
+  <title>Day20与Day21和页面互动 | Rainbow's Notes</title>
   
 
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/17/Day12and15相对复杂页面/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/26/Day20与页面互动/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rainbow">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Day12-15做一个复杂的页面</h1>
+          <h1 class="post-title" itemprop="name headline">Day20与Day21和页面互动</h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-17T00:00:00+08:00">
-                2018-06-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-26T00:00:00+08:00">
+                2018-06-26
               </time>
             
 
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  524
+                  1,291
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  5
                 </span>
               
             </div>
@@ -434,41 +434,63 @@
       
 
       
-        <h3 id="页面要求"><a href="#页面要求" class="headerlink" title="页面要求"></a>页面要求</h3><blockquote>
+        <h3 id="HTML-DOM-Text对象"><a href="#HTML-DOM-Text对象" class="headerlink" title="HTML-DOM Text对象"></a>HTML-DOM Text对象</h3><p>Text对象代表HTML表单中的文本输入域，在HTML中每次创建了一个input，那么就会生成一个Text对象，Text对象拥有属性和方法</p>
+<p><strong>Text对象属性</strong></p>
+<blockquote>
+<p>maxLength: 返回或设置文本域的最大字符数</p>
+<p>disabled: 返回或设置文本域是否应该被禁用</p>
+<p>defaultValue:返回或设置文本域的默认值</p>
+</blockquote>
+<p><strong>Text对象方法</strong></p>
+<blockquote>
+<p>blur() 失去焦点</p>
+<p>focus() 获取焦点</p>
+<p>select() 选择文本域中的内容</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&quot;input&quot;).focus();</span><br></pre></td></tr></table></figure>
+<h3 id="HTML-DOM-Button-对象"><a href="#HTML-DOM-Button-对象" class="headerlink" title="HTML-DOM-Button 对象"></a>HTML-DOM-Button 对象</h3><p>HTML文档中，button标签每次出现一次，Button对象就会被创建</p>
+<p><strong>Button对象属性</strong></p>
+<blockquote>
+<p>disabled</p>
+</blockquote>
+<h3 id="cssText的用法以及特点"><a href="#cssText的用法以及特点" class="headerlink" title="cssText的用法以及特点"></a><a href="https://www.cnblogs.com/majingyi/p/6840818.html" target="_blank" rel="noopener">cssText的用法以及特点</a></h3><p>cssText本质就是<strong>批量设置</strong>HTML元素的style属性值</p>
+<p><code>document.getElementById(&quot;p1&quot;).style.cssText = &quot;color:red;font-weight:bolder;&quot;</code></p>
+<p>之前设置style属性值只可以每次设置一条：这样的代价是，每一条js代码，都会摧毁css样式生成一个新的css样式表，这样多条js代码，会增加浏览器开销，所以cssText的使用很有必要。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;p1&quot;).style = &quot;color:red;font-weight:bolder;&quot;</span><br><span class="line">document.getElementById(&quot;p1&quot;).style = &quot;font-weight:bolder;&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>缺点：</strong> cssText每次被赋值后会将上一次的<strong>cssText值覆盖 </strong>，所以在使用cssText中最好使用<code>+=</code> 操作符；cssText在不同浏览器中兼容性不同，在chrome中赋什么值就返回什么值，在IE中，返回值为<strong>属性变为大写，且去掉了最后一个分号</strong>;由于上述原因，cssText赋值操作为：<code>document.getElementById(&quot;p1&quot;).style.cssText += &quot;: color:red;font-weight:bolder;&quot;</code>  <strong>注意： </strong>内容的前置分号，为了兼容IE，自动舍去最后一个分号的缺陷</p>
+<h3 id="JS事件机制"><a href="#JS事件机制" class="headerlink" title="JS事件机制"></a>JS事件机制</h3><h4 id="DOM0级："><a href="#DOM0级：" class="headerlink" title="DOM0级："></a>DOM0级：</h4><p>同一个元素对于同一个事件只能绑定一个，例如多次声明click事件，希望点击第一次第二次分别执行不同的效果，但是效果是：第二次函数覆盖第一次的函数。</p>
+<p><strong>解除绑定：</strong> 由于上述的同一个事件只能绑定一次且后声明覆盖前者，那么解除绑定十分容易，将事件函数声明为null;</p>
+<p>例如：解除点击事件<code>btn.onclick = null</code>  </p>
+<h4 id="DOM2级："><a href="#DOM2级：" class="headerlink" title="DOM2级："></a><a href="https://www.cnblogs.com/lazychen/p/5664788.html" target="_blank" rel="noopener">DOM2级：</a></h4><p>支持同一个元素注册多个同种事件</p>
+<p><strong>chrome</strong></p>
+<p><strong>注册</strong>： <code>addEventListener(eventName,handlers,boolean)</code> <strong>事件名</strong>，处理函数、第三个值默认为false，表示在冒泡阶段调用事件处理程序，修改为true表示在捕获阶段使用事件处理程序 addEventListener(<strong>‘click’</strong>,function(){},false)</p>
+<p><strong>移除：</strong> <code>removeEventListener(eventName,handlers,boolean)</code>  使用注册函数绑定的事件需要使用移除函数来解绑，注意解绑时，参数要与绑定时参数一样。</p>
+<p><strong>IE</strong> 只支持事件冒泡，绑定及移除函数只有两个参数，分别为<strong>事件处理名称</strong>、事处理函数，<strong>这些方法默认绑定到事件冒泡</strong>， 所有只有两个参数</p>
+<p><strong>注册</strong>： <code>attachEvent(事件处理名称，事件处理程序函数)</code>  attachEvent(<strong>‘onclick’</strong>,function(){…})</p>
+<p><strong>移除：</strong> <code>detachEvent(事件处理程序名称，事件处理函数)</code></p>
+<h4 id="事件委托："><a href="#事件委托：" class="headerlink" title="事件委托："></a>事件委托：</h4><p>事件委托：就是利用事件冒泡原理实现的，事件从事件源（被点击的子元素）开始，逐步向上传播事件，触发父级元素的相应事件。</p>
+<p>有三个同事预计会在周一收到快递。为签收快递，有两种办法：一是三个人在公司门口等快递；二是委托给前台MM代为签收。现实当中，我们大都采用委托的方案（公司也不会容忍那么多员工站在门口就为了等快递）。前台MM收到快递后，她会判断收件人是谁，然后按照收件人的要求签收，甚至代为付款。这种方案还有一个优势，那就是即使公司里来了新员工（不管多少），前台MM也会在收到寄给新员工的快递后核实并代为签收。</p>
+<h3 id="延迟执行函数"><a href="#延迟执行函数" class="headerlink" title="延迟执行函数"></a>延迟执行函数</h3><h4 id="setTimeout、clearTimeout"><a href="#setTimeout、clearTimeout" class="headerlink" title="setTimeout、clearTimeout"></a>setTimeout、clearTimeout</h4><p>注意： <code>setTimeout(code,time)</code> 这里的code为函数的时候需要加括号， <code>setTimeout(&#39;func()&#39;,time)</code>  <strong>需要添加引号</strong></p>
+<p>或者<code>setTimeout(func,time)</code> 没有引号同时函数也没有括号 </p>
+<p>如何写一个无限循环：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">hiddenDiv</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  clearTimeout(timer);</span><br><span class="line">  opacityVal -= <span class="number">0.1</span>;</span><br><span class="line">  fadeDiv.style.opacity = opacityVal;</span><br><span class="line">  btn.disabled = <span class="literal">true</span>;</span><br><span class="line">  <span class="keyword">if</span>(opacityVal &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">    clearTimeout(timer);</span><br><span class="line">    btn.disabled = <span class="literal">false</span>;</span><br><span class="line">    btn.textContent = <span class="string">"淡入"</span>;</span><br><span class="line">    hide = <span class="literal">true</span>;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    setTimeout(<span class="string">"hiddenDiv()"</span>,<span class="number">50</span>);</span><br><span class="line">  &#125;              	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="setInterval、clearInterval"><a href="#setInterval、clearInterval" class="headerlink" title="setInterval、clearInterval"></a>setInterval、clearInterval</h4><h3 id="css-sprite"><a href="#css-sprite" class="headerlink" title="css sprite"></a>css sprite</h3><p>这是一种网页图片应用处理方式。将多个图片通过测量的方式组合成一张图片，利用background-position属性来确定目标背景图，减少了http请求，缺点是需要测量每一个背景的坐标位置，比较繁琐。</p>
+<h3 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h3><blockquote>
 <ol>
-<li>最左侧一列要求自适应浏览器高度，左上面4个按钮相对浏览器左上角固定位置，左下方两个按钮相对浏览器左下角固定位置</li>
-<li>左侧第二列(蓝色背景色)导航列固定宽度，高度也是自适应浏览器高度，最下面的Monthly Goals部分的内容相对浏览器下边固定位置</li>
-<li>整个白色区域自适应宽度，右上方的人脸，名字部分相对浏览器右上角固定位置</li>
-<li>白色区域左侧列固定宽度，右侧列自适应宽度</li>
+<li><a href="https://codepen.io/younghw/full/GGdxry/" target="_blank" rel="noopener">输入内容后回车打印到控制台或输入过程中按Esc清空输入内容</a></li>
 </ol>
 </blockquote>
-<h3 id="实现过程中遇到并解决的问题"><a href="#实现过程中遇到并解决的问题" class="headerlink" title="实现过程中遇到并解决的问题"></a>实现过程中遇到并解决的问题</h3><blockquote>
-<ol>
-<li>实现滚动效果，但是要<strong>隐藏滚动条</strong> <a href="https://codepen.io/younghw/full/WyMZyY/" target="_blank" rel="noopener">隐藏滚动条</a></li>
-</ol>
-</blockquote>
-<p><strong>解决方案：</strong> </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner-wrapper"</span>&gt;</span></span><br><span class="line">		很多内容，高度会超出inner-wrapper</span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span></span></span><br></pre></td></tr></table></figure>
-<p>内层容器：定义其宽度大于外层容器17px（这里17px为滚动条宽度），设置内层容器<code>overflow:auto</code> 当其内容高度高于内层容器时，自动产生滚动条。</p>
-<p>外层容器：设置其<code>overflow:hidden</code> ,隐藏内层容器的滚动条。（因为内层宽度大于外层宽度17px）</p>
+<p><strong>遇到的问题</strong></p>
+<ul>
+<li>按键事件需要绑定到input中，onkeyup,注意event.which是chrome的键码，然而考虑兼容性，event.keyCode为IE的键码。<a href="https://www.cnblogs.com/shyy/archive/2012/04/09/2453029.html" target="_blank" rel="noopener">键码表</a>，注意其中的Enter，有两个Enter，一个为主键盘，一个为数字小键盘</li>
+</ul>
 <blockquote>
 <ol start="2">
-<li>最下面的Monthly Goals部分固定在浏览器下方（相当于<a href="http://www.w3cplus.com/css3/css-secrets/sticky-footers.html" target="_blank" rel="noopener">sticky footer</a>布局）</li>
+<li>[事件委托](<a href="https://codepen.io/younghw/full/YvjygQ/" target="_blank" rel="noopener">https://codepen.io/younghw/full/YvjygQ/</a></li>
+<li><a href="https://codepen.io/younghw/full/VdBvRb/" target="_blank" rel="noopener">setTimeout无限循环</a></li>
+<li><a href="https://codepen.io/younghw/full/vradEv/" target="_blank" rel="noopener">setInterval无限循环</a></li>
 </ol>
 </blockquote>
-<p><strong>解决方案：</strong> 有多种解决方案，固定高度、flexbox等方案，我在练习中使用的是固定高度解决方案</p>
-<p>固定高度：<a href="https://codepen.io/younghw/full/bKLagw/" target="_blank" rel="noopener">sticky-footer-calc</a></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"inner-wrapper"</span>&gt;</span></span><br><span class="line">    很多内容...</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span>Footer<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其实现原理很简单，首先确定footer 的高度，inner-wrapper的min-height为<code>calc(100% - footer的高度)</code>,确保在inner-wrapper没有内容时，高度仍会撑起整个容器高度。</p>
-<p>缺点是：当布局完成后，改变footer高度影响布局</p>
-<p>flexbox布局： <a href="https://codepen.io/younghw/full/KeQypP/" target="_blank" rel="noopener">sticky-footer-flexbox</a></p>
-<p>优点：可以随意改变footer的高度，布局不受影响。</p>
-<blockquote>
-<ol start="3">
-<li><code>calc()</code> 使用注意：运算符之间必须用空格隔开 <code>calc(100% - 50px)</code></li>
-</ol>
-</blockquote>
-<h3 id="代码地址"><a href="#代码地址" class="headerlink" title="代码地址"></a>代码地址</h3><p><a href="https://younguei.github.io/BaiduWeb/Day12-15/index.html" target="_blank" rel="noopener">相对复杂的页面</a></p>
 
       
     </div>
@@ -510,11 +532,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/切图/" rel="tag"># 切图</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/基本布局/" rel="tag"># 基本布局</a>
-          
-            <a href="/tags/写一个网页/" rel="tag"># 写一个网页</a>
+            <a href="/tags/DOM/" rel="tag"># DOM</a>
           
         </div>
       
@@ -527,8 +547,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/15/Day9and11完成一个简单页面/" rel="next" title="Day9-11完成一个简单页面">
-                <i class="fa fa-chevron-left"></i> Day9-11完成一个简单页面
+              <a href="/2018/06/21/Day19找到DOM/" rel="next" title="Day19找到那个DOM">
+                <i class="fa fa-chevron-left"></i> Day19找到那个DOM
               </a>
             
           </div>
@@ -536,10 +556,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/18/Day16JS/" rel="prev" title="Day16感受JS乐趣">
-                Day16感受JS乐趣 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -738,7 +754,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#页面要求"><span class="nav-number">1.</span> <span class="nav-text">页面要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现过程中遇到并解决的问题"><span class="nav-number">2.</span> <span class="nav-text">实现过程中遇到并解决的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码地址"><span class="nav-number">3.</span> <span class="nav-text">代码地址</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-DOM-Text对象"><span class="nav-number">1.</span> <span class="nav-text">HTML-DOM Text对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-DOM-Button-对象"><span class="nav-number">2.</span> <span class="nav-text">HTML-DOM-Button 对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cssText的用法以及特点"><span class="nav-number">3.</span> <span class="nav-text">cssText的用法以及特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS事件机制"><span class="nav-number">4.</span> <span class="nav-text">JS事件机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM0级："><span class="nav-number">4.1.</span> <span class="nav-text">DOM0级：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM2级："><span class="nav-number">4.2.</span> <span class="nav-text">DOM2级：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件委托："><span class="nav-number">4.3.</span> <span class="nav-text">事件委托：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#延迟执行函数"><span class="nav-number">5.</span> <span class="nav-text">延迟执行函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#setTimeout、clearTimeout"><span class="nav-number">5.1.</span> <span class="nav-text">setTimeout、clearTimeout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setInterval、clearInterval"><span class="nav-number">5.2.</span> <span class="nav-text">setInterval、clearInterval</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-sprite"><span class="nav-number">6.</span> <span class="nav-text">css sprite</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码练习"><span class="nav-number">7.</span> <span class="nav-text">代码练习</span></a></li></ol></div>
             
 
           </div>
