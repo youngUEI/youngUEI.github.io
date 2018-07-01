@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="JavaScript  脚本语言: 是一种不需要编译的编程语言，传统的编译型编程语言（C Java）需要先编译成二进制机器码，再交给机器执行，脚本语言写出的代码就是最终执行文件，效率高。 在JS中，应用程序编程接口APIs会提供很欠打的功能，分为两类:  浏览器APIs，存在于浏览器中，包括文档对象模型API(DOM)、地理位置API、画布等API 第三方APIs：默认没有安装到浏览器内，可以从网">
+<meta name="description" content="Date对象创建Date对象，new Date()该对象会自动把当前日期和时间保存为初始值 Date对象方法  Date(): 注意： 返回当前的日期和时间，不需要前置date对象实例  document.write(Date()) 打印当前日期时间 注意： Date()方法返回一个字符串，无法使用下面的各种方法，new Date（）返回一个日期对象，该对象才有下面的的各种方法 dateObj.g">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Day16感受JS乐趣">
-<meta property="og:url" content="http://yoursite.com/2018/06/18/Day16JS/index.html">
+<meta property="og:title" content="Day25-Day27倒数开始函数内容">
+<meta property="og:url" content="http://yoursite.com/2018/06/29/Day25至27select对象/index.html">
 <meta property="og:site_name" content="Rainbow&#39;s Notes">
-<meta property="og:description" content="JavaScript  脚本语言: 是一种不需要编译的编程语言，传统的编译型编程语言（C Java）需要先编译成二进制机器码，再交给机器执行，脚本语言写出的代码就是最终执行文件，效率高。 在JS中，应用程序编程接口APIs会提供很欠打的功能，分为两类:  浏览器APIs，存在于浏览器中，包括文档对象模型API(DOM)、地理位置API、画布等API 第三方APIs：默认没有安装到浏览器内，可以从网">
+<meta property="og:description" content="Date对象创建Date对象，new Date()该对象会自动把当前日期和时间保存为初始值 Date对象方法  Date(): 注意： 返回当前的日期和时间，不需要前置date对象实例  document.write(Date()) 打印当前日期时间 注意： Date()方法返回一个字符串，无法使用下面的各种方法，new Date（）返回一个日期对象，该对象才有下面的的各种方法 dateObj.g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-19T05:32:25.455Z">
+<meta property="og:updated_time" content="2018-07-01T07:47:16.165Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Day16感受JS乐趣">
-<meta name="twitter:description" content="JavaScript  脚本语言: 是一种不需要编译的编程语言，传统的编译型编程语言（C Java）需要先编译成二进制机器码，再交给机器执行，脚本语言写出的代码就是最终执行文件，效率高。 在JS中，应用程序编程接口APIs会提供很欠打的功能，分为两类:  浏览器APIs，存在于浏览器中，包括文档对象模型API(DOM)、地理位置API、画布等API 第三方APIs：默认没有安装到浏览器内，可以从网">
+<meta name="twitter:title" content="Day25-Day27倒数开始函数内容">
+<meta name="twitter:description" content="Date对象创建Date对象，new Date()该对象会自动把当前日期和时间保存为初始值 Date对象方法  Date(): 注意： 返回当前的日期和时间，不需要前置date对象实例  document.write(Date()) 打印当前日期时间 注意： Date()方法返回一个字符串，无法使用下面的各种方法，new Date（）返回一个日期对象，该对象才有下面的的各种方法 dateObj.g">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/18/Day16JS/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/29/Day25至27select对象/"/>
 
 
 
 
 
-  <title>Day16感受JS乐趣 | Rainbow's Notes</title>
+  <title>Day25-Day27倒数开始函数内容 | Rainbow's Notes</title>
   
 
 
@@ -314,7 +314,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/18/Day16JS/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/29/Day25至27select对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rainbow">
@@ -331,7 +331,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Day16感受JS乐趣</h1>
+          <h1 class="post-title" itemprop="name headline">Day25-Day27倒数开始函数内容</h1>
         
 
         <div class="post-meta">
@@ -343,8 +343,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-18T00:00:00+08:00">
-                2018-06-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-29T00:00:00+08:00">
+                2018-06-29
               </time>
             
 
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  372
+                  473
                 </span>
               
 
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -434,37 +434,47 @@
       
 
       
-        <h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><blockquote>
+        <h3 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h3><p>创建Date对象，<code>new Date()</code>该对象会自动把当前日期和时间保存为初始值</p>
+<p><strong>Date</strong><a href="http://www.w3school.com.cn/jsref/jsref_obj_date.asp" target="_blank" rel="noopener">对象方法</a></p>
+<blockquote>
+<p><strong>Date(): 注意： 返回当前的日期和时间，不需要前置date对象实例</strong>  <code>document.write(Date())</code> 打印当前日期时间 <strong>注意： Date()方法返回一个字符串，无法使用下面的各种方法，new Date（）返回一个日期对象，该对象才有下面的的各种方法</strong></p>
+<p>dateObj.<strong>getDate()</strong>: 返回月份中的某一天，返回值为1-31</p>
+<p>dateObj.<strong>getDay()</strong>: 返回星期中的某一天, 0-6（0为周日）</p>
+<p>dateObj.getMonth(): 返回月份0-11</p>
+<p>dateObj.getFullYear(): 以四位数字返回年份</p>
+<p>dateObj.<strong>getTime()</strong>: 返回距离1970年1月1日之间的毫秒数</p>
+<p><strong>Date.parse(dateStr)</strong>  ： 将一个日期字符串以毫秒形式返回，表示距离1970年的毫秒数，<strong>注意：前置为Date</strong></p>
+<p>dateObj.toString(): 将Date对象转换为字符串，返回字符串</p>
+<p>dateObj.toTimeString(): </p>
+<p>dateObj.toDateString(): </p>
+</blockquote>
+<p>###HTML DOM Select对象</p>
+<p><code>&lt;select&gt;</code>标签每次出现一次，便创建了一个select对象  <code>&lt;select&gt; &lt;option value=&quot;..&quot;&gt;..&lt;/option&gt;&lt;/select&gt;</code></p>
+<blockquote>
+<p>Select对象中存在options对象集合，select[0]表示select中第一个option选项</p>
+<p>select[0] === select.options[0] 两种写法都可以</p>
+</blockquote>
+<h3 id="代码练习"><a href="#代码练习" class="headerlink" title="代码练习"></a>代码练习</h3><blockquote>
 <ol>
-<li>脚本语言: 是一种不需要编译的编程语言，传统的编译型编程语言（C Java）需要先编译成二进制机器码，再交给机器执行，脚本语言写出的代码就是最终执行文件，效率高。</li>
-<li>在JS中，<strong>应用程序编程接口</strong>APIs会提供很欠打的功能，分为两类: <ul>
-<li>浏览器APIs，存在于浏览器中，包括文档对象模型API(DOM)、地理位置API、画布等API</li>
-<li>第三方APIs：默认没有安装到浏览器内，可以从网络上获取。如谷歌地图API</li>
-</ul>
-</li>
-<li>JavaScript和ECMAScript的区别：<ul>
-<li>ECMAScript是一种规范，定义了JavaScript语言规则</li>
-<li>JavaScript是一种解释型脚本语言，遵循了ECMAScript规范</li>
-<li>ECMAScript6是一种第六版新规范，相对于ECMAScript规范有显著的变化和改进，同义词：ES6、ES2015、ECMAScript 2015</li>
-</ul>
-</li>
+<li><a href="https://codepen.io/younghw/full/pKqvdZ/" target="_blank" rel="noopener">最简单的时钟</a></li>
+<li><a href="https://codepen.io/younghw/full/vrvEvg/" target="_blank" rel="noopener">十二小时制的时钟</a></li>
+<li><a href="https://younguei.github.io/BaiduWeb/Day25-27/index2.html" target="_blank" rel="noopener">日期的选择</a>  </li>
 </ol>
 </blockquote>
-<h3 id="JavaScript语法"><a href="#JavaScript语法" class="headerlink" title="JavaScript语法"></a>JavaScript语法</h3><blockquote>
+<h3 id="日期的选择代码分析："><a href="#日期的选择代码分析：" class="headerlink" title="日期的选择代码分析："></a>日期的选择代码分析：</h3><blockquote>
 <ol>
-<li><code>document.write(...)</code> 向文档流中写入内容，注意： 在文档加载完毕后执行该语句，整个HTML页面将会被重写</li>
-<li>声明变量类型: 在声明新变量时，可以使用new关键字来声明其类型,js变量均为对象，当声明了一个变量时，就创建了一个新对象。 <strong>疑问：什么时候需要声明变量类型？</strong><ul>
-<li><code>var x = new Number; var y = new Boolean;</code></li>
-</ul>
-</li>
-<li>在js中所有事物都是对象，string、number、array</li>
+<li>不同的月份对应不同的天数 <code>rationalityCheck</code> 函数</li>
 </ol>
 </blockquote>
-<h3 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h3><blockquote>
-<p><a href="https://codepen.io/younghw/full/RJjzPE/" target="_blank" rel="noopener">加减乘除运算</a></p>
-<p><a href="https://codepen.io/younghw/full/MXOdEW/" target="_blank" rel="noopener">简历</a></p>
-<p><a href="https://codepen.io/younghw/full/KeZKwV/" target="_blank" rel="noopener">简单猜数字小游戏</a></p>
+<p>主要针对选项中29、30、31天操作，其中select对象存在options对象集合，select[28] select[29] select[30] 分别对应这三天</p>
+<p>每次select改变后触发onchange事件，要执行该函数判断月份和天数的对应</p>
+<blockquote>
+<ol start="2">
+<li>格式化时间</li>
+</ol>
 </blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var now_date = new Date();  // 返回当前日期对象</span><br><span class="line">var selected_date = new Date(year,month-1,datee)  // 返回当前日期对象</span><br><span class="line">var date_differ = now_date - selected_date;  //返回毫秒数</span><br></pre></td></tr></table></figure>
+<p>日期对象相减得到的是毫秒数</p>
 
       
     </div>
@@ -519,8 +529,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/17/Day12and15相对复杂页面/" rel="next" title="Day12-15做一个复杂的页面">
-                <i class="fa fa-chevron-left"></i> Day12-15做一个复杂的页面
+              <a href="/2018/06/26/Day22js中的原始居民/" rel="next" title="Day22-Day24JavaScript里面的居民们">
+                <i class="fa fa-chevron-left"></i> Day22-Day24JavaScript里面的居民们
               </a>
             
           </div>
@@ -528,10 +538,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/19/Day17至18JS/" rel="prev" title="Day17-18JS基础">
-                Day17-18JS基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -730,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript"><span class="nav-number">1.</span> <span class="nav-text">JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript语法"><span class="nav-number">2.</span> <span class="nav-text">JavaScript语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#练习"><span class="nav-number">3.</span> <span class="nav-text">练习</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Date对象"><span class="nav-number">1.</span> <span class="nav-text">Date对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码练习"><span class="nav-number">2.</span> <span class="nav-text">代码练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日期的选择代码分析："><span class="nav-number">3.</span> <span class="nav-text">日期的选择代码分析：</span></a></li></ol></div>
             
 
           </div>
