@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Day28-Day30发个邮件吧]]></title>
+    <url>%2F2018%2F07%2F01%2FDay28%E8%87%B3Day30%E5%8F%91%E4%B8%AA%E9%82%AE%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[Web安全之XSS攻防跨站脚本攻击，向页面内恶意注入js代码，用户浏览页面时，注入的恶意js代码将会执行并攻击用户。 编码和解码尚未实现 我的作业 别人的代码]]></content>
+      <categories>
+        <category>百度前端技术学院2018</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Day25-Day27倒数开始函数内容]]></title>
     <url>%2F2018%2F06%2F29%2FDay25%E8%87%B327select%E5%AF%B9%E8%B1%A1%2F</url>
     <content type="text"><![CDATA[Date对象创建Date对象，new Date()该对象会自动把当前日期和时间保存为初始值 Date对象方法 Date(): 注意： 返回当前的日期和时间，不需要前置date对象实例 document.write(Date()) 打印当前日期时间 注意： Date()方法返回一个字符串，无法使用下面的各种方法，new Date（）返回一个日期对象，该对象才有下面的的各种方法 dateObj.getDate(): 返回月份中的某一天，返回值为1-31 dateObj.getDay(): 返回星期中的某一天, 0-6（0为周日） dateObj.getMonth(): 返回月份0-11 dateObj.getFullYear(): 以四位数字返回年份 dateObj.getTime(): 返回距离1970年1月1日之间的毫秒数 Date.parse(dateStr) ： 将一个日期字符串以毫秒形式返回，表示距离1970年的毫秒数，注意：前置为Date dateObj.toString(): 将Date对象转换为字符串，返回字符串 dateObj.toTimeString(): dateObj.toDateString(): ###HTML DOM Select对象 &lt;select&gt;标签每次出现一次，便创建了一个select对象 &lt;select&gt; &lt;option value=&quot;..&quot;&gt;..&lt;/option&gt;&lt;/select&gt; Select对象中存在options对象集合，select[0]表示select中第一个option选项 select[0] === select.options[0] 两种写法都可以 代码练习 最简单的时钟 十二小时制的时钟 日期的选择 日期的选择代码分析： 不同的月份对应不同的天数 rationalityCheck 函数 主要针对选项中29、30、31天操作，其中select对象存在options对象集合，select[28] select[29] select[30] 分别对应这三天 每次select改变后触发onchange事件，要执行该函数判断月份和天数的对应 格式化时间 123var now_date = new Date(); // 返回当前日期对象var selected_date = new Date(year,month-1,datee) // 返回当前日期对象var date_differ = now_date - selected_date; //返回毫秒数 日期对象相减得到的是毫秒数]]></content>
@@ -139,6 +150,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Day2做一个在线简历]]></title>
+    <url>%2F2018%2F06%2F08%2FDay2%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AE%80%E5%8E%86%2F</url>
+    <content type="text"><![CDATA[阅读延伸W3CSchool的HTML教学 在线教程 &lt;a href=&quot;....&quot;&gt;This is a link&lt;/a&gt; 区别href与src : 参考 href: 表示超文本引用，用于引用网络资源的位置，可以通过锚点可以跳转到目标资源上，当然也可以引入css，常用在link a 标签上，&lt;link href=&quot;reset.css&quot; rel=&quot;stylesheet&quot;/&gt;浏览器会从对应的地址上下载css文件，下载过程中，并不会停止对当前文档的处理，这也是*建议使用link引用css而不使用@import加载css的原因 src ： 即source，是页面中不可缺少的一部分，src指向的内容会嵌入到文档中标签所在位置，常用在script img 上。 &lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt; 该标签会引入demo.js文件中js代码，替换此处的script标签 总而言之： href表示当前文档与引用资源之间建立联系，src用于替换当前元素 HTML图像： &lt;img src=&#39;图片地址&#39; width=&#39;66&#39; height=&#39;66&#39;&gt; 定义img图像需要将尺寸以标签属性的形式声明 HTML标签及标签内属性大小写不敏感，所以在自定义标签的时候可以使用中划线的方法 &lt;my-tag title=&#39;this is my tag&#39;&gt;&lt;/my-tag&gt; 适用于大多数标签的常用的几个HTML属性：class id style title 引用标签：较短语句的引用&lt;q&gt;...&lt;/q&gt; 较长的引用&lt;blockquote&gt;...&lt;/blockquote &lt;q&gt;会将元素内容前后添加引号来在页面上显示 &lt;blockquote&gt; 会将元素内容进行缩进来在页面上显示 &lt;a&gt;标签定义锚点，在同一文章内可以利用锚点跳转,使用name来定义锚点 1234&gt; &gt; &lt;a name="tips"&gt;基本的注意事项&lt;/a&gt;&gt; &gt; ....&gt; &gt; &lt;a href="#tips"&gt;跳转到注意事项&lt;/a&gt;&gt; &gt; 注意： 在使用链接标签链接地址为一个文件夹的时候要注意href的地址正确写法 1234567&gt; &lt;a href="http://www.w3school.com.cn/html"&gt;该链接会产生两次HTTP请求&lt;/a&gt;&gt; &lt;!-- 如果子文件夹的末尾没有正斜杠，就会产生两次HTTP请求 --&gt;&gt; &lt;!-- 应为当子文件夹没有正斜杠，服务器会添加正斜杠到该地址，另外创建了一个新请求 --&gt;&gt; .... &gt; &lt;!-- 正确写法 --&gt;&gt; &lt;a href="http://www.w3school.com.cn/html/"&gt;跳转到注意事项&lt;/a&gt;&gt; &lt;img&gt; 创建图像映射，图像标签的usemap属性来定义图像映射,该属性值为&lt;map&gt;元素的name或id属性值 图像映射： 一个图像建立多个链接，点击图像的不同区域跳转到不同的链接地址 1234567&gt; &gt; &lt;img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&amp;quality=100&amp;size=b4000_4000&amp;sec=1528507118&amp;di=52579fb03028f32458941a0083d04dc5&amp;src=http://img3.duitang.com/uploads/item/201509/04/20150904014041_Lw8Cv.jpeg" alt="" width="166" height="166" usemap="#my-map"&gt;&gt; &gt; &lt;!-- img标签通过usemap属性来链接到map标签 --&gt;&gt; &gt; &lt;map name='my-map' id="my-map"&gt;&gt; &gt; &lt;area shape="circle" coords="0,0,30" href="https://baidu.com/"/&gt;&gt; &gt; &lt;area shape="rect" coords="0,88,166,166" href="http://www.w3school.com.cn/"/&gt;&gt; &gt; &lt;/map&gt;&gt; &gt; area 标签中coords属性：值为像素，起点为图片的左上角 框架： &lt;frameset&gt; 标签用于定义如何分隔窗口，其中属性值rows/columns定义了每行或每列占据屏幕的面积,&lt;frame&gt;标签用于定义每个框架 12345&gt; &gt; &lt;frameset cols="25%,75%"&gt;&gt; &gt; &lt;frame src="frame_a.html"&gt;&gt; &gt; &lt;frame src="frame_b.html"&gt;&gt; &gt; &lt;/frameset&gt;&gt; &gt; 实现了页面分隔为左右两部分 内联框架：指在网页内显示网页,使用&lt;iframe&gt;标签 12&gt; &gt; &lt;iframe src=&quot;...&quot; width=&quot;80&quot; height=&quot;100&quot;&gt;&lt;/iframe&gt;&gt; &gt; &lt;noscript&gt; 该标签用于在浏览器不支持js的时候显示相应的文本 &lt;noscript&gt;你的浏览器不支持js&lt;/noscript&gt; HTML中的实体字符 在HTML中，某些字符有特殊意义,比如&lt; 代表标签的开始，但是有时候需要使用特殊字符，这里引入了实体字符，其中&amp;nbsp 代表 空格 ​]]></content>
+      <categories>
+        <category>百度前端技术学院2018</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Day1为什么学前端]]></title>
     <url>%2F2018%2F06%2F08%2FDay1%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6%E5%89%8D%E7%AB%AF%2F</url>
     <content type="text"><![CDATA[学习前端断断续续接近半年，终于赶上这次百度前端技术学院开课了，趁机会系统学习一下前端基础知识。 几个基础的概念 HTML5 : 这是HTML的新标准，其中添加好多新标签与属性，目前开发者正热情的推广该版本 XML : 可扩展标记语言，用于传输和存储数据 XHTML : 是HTML的严格版本，该标准对语法要求严格 XML 与 XHTML HTML区别： XML 是用于存储和传输数据的，其重点为数据的内容；XHTML HTML是用于显示信息的，其重点为数据的展示。 后端的几个概念： 只是粗略的了解node php 还尚未深入。 待续……]]></content>
@@ -148,17 +170,6 @@
       <tags>
         <tag>HTML</tag>
         <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Day2做一个在线简历]]></title>
-    <url>%2F2018%2F06%2F08%2FDay2%E5%81%9A%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AE%80%E5%8E%86%2F</url>
-    <content type="text"><![CDATA[阅读延伸W3CSchool的HTML教学 在线教程 &lt;a href=&quot;....&quot;&gt;This is a link&lt;/a&gt; 区别href与src : 参考 href: 表示超文本引用，用于引用网络资源的位置，可以通过锚点可以跳转到目标资源上，当然也可以引入css，常用在link a 标签上，&lt;link href=&quot;reset.css&quot; rel=&quot;stylesheet&quot;/&gt;浏览器会从对应的地址上下载css文件，下载过程中，并不会停止对当前文档的处理，这也是*建议使用link引用css而不使用@import加载css的原因 src ： 即source，是页面中不可缺少的一部分，src指向的内容会嵌入到文档中标签所在位置，常用在script img 上。 &lt;script src=&quot;demo.js&quot;&gt;&lt;/script&gt; 该标签会引入demo.js文件中js代码，替换此处的script标签 总而言之： href表示当前文档与引用资源之间建立联系，src用于替换当前元素 HTML图像： &lt;img src=&#39;图片地址&#39; width=&#39;66&#39; height=&#39;66&#39;&gt; 定义img图像需要将尺寸以标签属性的形式声明 HTML标签及标签内属性大小写不敏感，所以在自定义标签的时候可以使用中划线的方法 &lt;my-tag title=&#39;this is my tag&#39;&gt;&lt;/my-tag&gt; 适用于大多数标签的常用的几个HTML属性：class id style title 引用标签：较短语句的引用&lt;q&gt;...&lt;/q&gt; 较长的引用&lt;blockquote&gt;...&lt;/blockquote &lt;q&gt;会将元素内容前后添加引号来在页面上显示 &lt;blockquote&gt; 会将元素内容进行缩进来在页面上显示 &lt;a&gt;标签定义锚点，在同一文章内可以利用锚点跳转,使用name来定义锚点 1234&gt; &gt; &lt;a name="tips"&gt;基本的注意事项&lt;/a&gt;&gt; &gt; ....&gt; &gt; &lt;a href="#tips"&gt;跳转到注意事项&lt;/a&gt;&gt; &gt; 注意： 在使用链接标签链接地址为一个文件夹的时候要注意href的地址正确写法 1234567&gt; &lt;a href="http://www.w3school.com.cn/html"&gt;该链接会产生两次HTTP请求&lt;/a&gt;&gt; &lt;!-- 如果子文件夹的末尾没有正斜杠，就会产生两次HTTP请求 --&gt;&gt; &lt;!-- 应为当子文件夹没有正斜杠，服务器会添加正斜杠到该地址，另外创建了一个新请求 --&gt;&gt; .... &gt; &lt;!-- 正确写法 --&gt;&gt; &lt;a href="http://www.w3school.com.cn/html/"&gt;跳转到注意事项&lt;/a&gt;&gt; &lt;img&gt; 创建图像映射，图像标签的usemap属性来定义图像映射,该属性值为&lt;map&gt;元素的name或id属性值 图像映射： 一个图像建立多个链接，点击图像的不同区域跳转到不同的链接地址 1234567&gt; &gt; &lt;img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&amp;quality=100&amp;size=b4000_4000&amp;sec=1528507118&amp;di=52579fb03028f32458941a0083d04dc5&amp;src=http://img3.duitang.com/uploads/item/201509/04/20150904014041_Lw8Cv.jpeg" alt="" width="166" height="166" usemap="#my-map"&gt;&gt; &gt; &lt;!-- img标签通过usemap属性来链接到map标签 --&gt;&gt; &gt; &lt;map name='my-map' id="my-map"&gt;&gt; &gt; &lt;area shape="circle" coords="0,0,30" href="https://baidu.com/"/&gt;&gt; &gt; &lt;area shape="rect" coords="0,88,166,166" href="http://www.w3school.com.cn/"/&gt;&gt; &gt; &lt;/map&gt;&gt; &gt; area 标签中coords属性：值为像素，起点为图片的左上角 框架： &lt;frameset&gt; 标签用于定义如何分隔窗口，其中属性值rows/columns定义了每行或每列占据屏幕的面积,&lt;frame&gt;标签用于定义每个框架 12345&gt; &gt; &lt;frameset cols="25%,75%"&gt;&gt; &gt; &lt;frame src="frame_a.html"&gt;&gt; &gt; &lt;frame src="frame_b.html"&gt;&gt; &gt; &lt;/frameset&gt;&gt; &gt; 实现了页面分隔为左右两部分 内联框架：指在网页内显示网页,使用&lt;iframe&gt;标签 12&gt; &gt; &lt;iframe src=&quot;...&quot; width=&quot;80&quot; height=&quot;100&quot;&gt;&lt;/iframe&gt;&gt; &gt; &lt;noscript&gt; 该标签用于在浏览器不支持js的时候显示相应的文本 &lt;noscript&gt;你的浏览器不支持js&lt;/noscript&gt; HTML中的实体字符 在HTML中，某些字符有特殊意义,比如&lt; 代表标签的开始，但是有时候需要使用特殊字符，这里引入了实体字符，其中&amp;nbsp 代表 空格 ​]]></content>
-      <categories>
-        <category>百度前端技术学院2018</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
